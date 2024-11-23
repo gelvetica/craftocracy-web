@@ -16,7 +16,7 @@ const AccountInfoComponent = () => {
             <p className="text-2xl">Discord: {data.dc_uuid}</p><br/>
             <p className="text-2xl">Minecraft: {data.mc_uuid}</p><br/>
             <p className="text-2xl">Strudel: {data.id}</p><br/>
-            <p className="text-xs text-subtext0">todo: proper fetch discord, minecraft usernames. pretty this up in general</p>
+            <p className="text-xs text-subtext0">LATER: proper fetch discord, minecraft usernames. pretty this up in general</p>
         </ul>
     );
 }
