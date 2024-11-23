@@ -1,0 +1,1 @@
+{"properties":{"login_url":{"type":"string","title":"Login Url"}},"type":"object","required":["login_url"],"title":"ServerInfoModel","x-readme-ref-name":"ServerInfoModel"}

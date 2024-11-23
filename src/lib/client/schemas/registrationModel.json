@@ -1,0 +1,1 @@
+{"properties":{"name":{"type":"string","title":"Name"},"pronouns":{"type":"string","enum":["they","she","he","it"],"title":"Pronouns"}},"type":"object","required":["name","pronouns"],"title":"RegistrationModel","x-readme-ref-name":"RegistrationModel"}

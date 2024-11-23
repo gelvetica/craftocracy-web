@@ -1,0 +1,1 @@
+{"properties":{"id":{"type":"string","title":"Id"},"name":{"type":"string","title":"Name"},"dc_uuid":{"type":"string","title":"Dc Uuid"},"mc_uuid":{"type":"string","title":"Mc Uuid"}},"type":"object","required":["id","name","dc_uuid","mc_uuid"],"title":"UserAccountModel","x-readme-ref-name":"UserAccountModel"}

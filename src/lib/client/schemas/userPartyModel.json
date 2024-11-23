@@ -1,0 +1,1 @@
+{"properties":{"id":{"type":"string","title":"Id"},"name":{"type":"string","title":"Name"},"shorthand":{"type":"string","title":"Shorthand"},"color":{"type":"string","title":"Color"}},"type":"object","required":["id","name","shorthand","color"],"title":"UserPartyModel","x-readme-ref-name":"UserPartyModel"}

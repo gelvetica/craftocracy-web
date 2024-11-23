@@ -1,0 +1,18 @@
+'use client'
+
+import {useSearchParams} from "next/navigation";
+import {callbackCallbackGet} from "@/lib/client";
+import useSWR from "swr";
+
+function sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+}
+export default function SignIn() {
+    const searchParams = useSearchParams()
+    const input_code = searchParams.get('code')
+    const {data, error, isLoading} = useSWR({code: input_code}, callbackCallbackGet);
+    if (error) return <div>failed to load</div>
+    if (isLoading) return <div>please wait...</div>
+    localStorage.setItem("strudel_token", data.access_token)
+    window.location.href = "/userlandingredir"
+}
