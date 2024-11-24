@@ -1,7 +1,6 @@
 import { defineConfig } from '@kubb/core'
 import { pluginOas } from '@kubb/plugin-oas'
 import { pluginTs } from '@kubb/plugin-ts'
-import { pluginSwr } from '@kubb/plugin-swr'
 import { pluginClient } from '@kubb/plugin-client'
 
 export default defineConfig({
