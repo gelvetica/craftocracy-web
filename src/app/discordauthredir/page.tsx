@@ -5,9 +5,5 @@ import {serverInfoGet} from "@/lib/client";
 import {redirect} from "next/navigation";
 
 export default function Home() {
-    const {data, isLoading} = useSWR("/", serverInfoGet);
-    if (isLoading) return
-    if (data) {
-        redirect(data.login_url);
-    }
+    redirect(process.env.NEXT_PUBLIC_DISCORD_OAUTH_URL);
 }
