@@ -23,8 +23,8 @@ const UsersList = () => {
         <ul>
             {data.users.map((user) => {
                 const party = resolve_party_reference(user.party);
-                const pref = `/party/${party.id}`;
-                const uref = `/user/${user.id}`;
+                const pref = `/parties/${party.id}`;
+                const uref = `/users/${user.id}`;
                 return (
                     <li key={user.id}><Link href={pref}>[{party.shorthand}]</Link> <Link href={uref}>{user.name}</Link></li>
                 )
