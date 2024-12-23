@@ -22,7 +22,7 @@ const MyComponent = () => {
 export default function Home() {
   return (
     <div>
-        <p className="text-2xl">Craftocracy Demo</p>
+        <p className="text-2xl">Craftocracy's Unfinished Website</p>
     </div>
   );
 }
