@@ -5,7 +5,7 @@ import type { RegisterUserAccountPostMutationRequest, RegisterUserAccountPostMut
 
  /**
  * @summary Register User
- * @link /account/
+ * {@link /account/}
  */
 export async function registerUserAccountPost(data: RegisterUserAccountPostMutationRequest, config: Partial<RequestConfig<RegisterUserAccountPostMutationRequest>> = {}) {
     const res = await client<RegisterUserAccountPostMutationResponse, RegisterUserAccountPost422, RegisterUserAccountPostMutationRequest>({ method: "POST", url: `/account/`, data, ...config });

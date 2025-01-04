@@ -5,7 +5,7 @@ import type { CallbackCallbackGetQueryResponse, CallbackCallbackGetQueryParams, 
 
  /**
  * @summary Callback
- * @link /callback
+ * {@link /callback}
  */
 export async function callbackCallbackGet(params: CallbackCallbackGetQueryParams, config: Partial<RequestConfig> = {}) {
     const res = await client<CallbackCallbackGetQueryResponse, CallbackCallbackGet422, unknown>({ method: "GET", url: `/callback`, params, ...config });

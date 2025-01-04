@@ -5,9 +5,9 @@ import type { GetPartyPartiesPartyIdGetQueryResponse, GetPartyPartiesPartyIdGetP
 
  /**
  * @summary Get Party
- * @link /parties/:party_id
+ * {@link /parties/:party_id}
  */
-export async function getPartyPartiesPartyIdGet(partyId: GetPartyPartiesPartyIdGetPathParams["party_id"], config: Partial<RequestConfig> = {}) {
-    const res = await client<GetPartyPartiesPartyIdGetQueryResponse, GetPartyPartiesPartyIdGet422, unknown>({ method: "GET", url: `/parties/${partyId}`, ...config });
+export async function getPartyPartiesPartyIdGet(party_id: GetPartyPartiesPartyIdGetPathParams["party_id"], config: Partial<RequestConfig> = {}) {
+    const res = await client<GetPartyPartiesPartyIdGetQueryResponse, GetPartyPartiesPartyIdGet422, unknown>({ method: "GET", url: `/parties/${party_id}`, ...config });
     return res.data;
 }

@@ -5,7 +5,7 @@ import type { ServerInfoGetQueryResponse } from "./types/ServerInfoGet.ts";
 
  /**
  * @summary Server Info
- * @link /
+ * {@link /}
  */
 export async function serverInfoGet(config: Partial<RequestConfig> = {}) {
     const res = await client<ServerInfoGetQueryResponse, Error, unknown>({ method: "GET", url: `/`, ...config });

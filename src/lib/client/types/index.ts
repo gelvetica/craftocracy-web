@@ -1,6 +1,11 @@
 export type { AuthCallbackModel } from "./AuthCallbackModel.ts";
+export type { BallotFirstEnum, BallotSecondEnum, BallotThirdEnum, Ballot } from "./Ballot.ts";
 export type { CallbackCallbackGetQueryParams, CallbackCallbackGet200, CallbackCallbackGet422, CallbackCallbackGetQueryResponse, CallbackCallbackGetQuery } from "./CallbackCallbackGet.ts";
+export type { CastBallotElectionPost200, CastBallotElectionPost422, CastBallotElectionPostMutationRequest, CastBallotElectionPostMutationResponse, CastBallotElectionPostMutation } from "./CastBallotElectionPost.ts";
+export type { ElectionModel } from "./ElectionModel.ts";
 export type { GetAccountAccountGet200, GetAccountAccountGetQueryResponse, GetAccountAccountGetQuery } from "./GetAccountAccountGet.ts";
+export type { GetAmIEvenAllowedToVoteAmIEvenAllowedToVoteGet200, GetAmIEvenAllowedToVoteAmIEvenAllowedToVoteGetQueryResponse, GetAmIEvenAllowedToVoteAmIEvenAllowedToVoteGetQuery } from "./GetAmIEvenAllowedToVoteAmIEvenAllowedToVoteGet.ts";
+export type { GetElectionElectionGet200, GetElectionElectionGetQueryResponse, GetElectionElectionGetQuery } from "./GetElectionElectionGet.ts";
 export type { GetPartyPartiesPartyIdGetPathParams, GetPartyPartiesPartyIdGet200, GetPartyPartiesPartyIdGet422, GetPartyPartiesPartyIdGetQueryResponse, GetPartyPartiesPartyIdGetQuery } from "./GetPartyPartiesPartyIdGet.ts";
 export type { GetUserUsersUserIdGetPathParams, GetUserUsersUserIdGet200, GetUserUsersUserIdGet422, GetUserUsersUserIdGetQueryResponse, GetUserUsersUserIdGetQuery } from "./GetUserUsersUserIdGet.ts";
 export type { HttpValidationError } from "./HttpValidationError.ts";
@@ -19,4 +24,6 @@ export type { UserCollection } from "./UserCollection.ts";
 export type { UserModel } from "./UserModel.ts";
 export type { UserPartyModel } from "./UserPartyModel.ts";
 export type { ValidationError } from "./ValidationError.ts";
+export type { VoterStatusModel } from "./VoterStatusModel.ts";
+export { ballotFirstEnum, ballotSecondEnum, ballotThirdEnum } from "./Ballot.ts";
 export { registrationModelPronounsEnum } from "./RegistrationModel.ts";

@@ -5,7 +5,7 @@ import type { ListUsersUsersGetQueryResponse } from "./types/ListUsersUsersGet.t
 
  /**
  * @summary List Users
- * @link /users/
+ * {@link /users/}
  */
 export async function listUsersUsersGet(config: Partial<RequestConfig> = {}) {
     const res = await client<ListUsersUsersGetQueryResponse, Error, unknown>({ method: "GET", url: `/users/`, ...config });

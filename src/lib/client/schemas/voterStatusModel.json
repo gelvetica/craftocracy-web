@@ -1,0 +1,1 @@
+{"properties":{"allowed":{"type":"boolean","title":"Allowed"},"reason":{"type":"string","title":"Reason"}},"type":"object","required":["allowed","reason"],"title":"VoterStatusModel","x-readme-ref-name":"VoterStatusModel"}

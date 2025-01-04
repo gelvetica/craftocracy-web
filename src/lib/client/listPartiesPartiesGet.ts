@@ -5,7 +5,7 @@ import type { ListPartiesPartiesGetQueryResponse } from "./types/ListPartiesPart
 
  /**
  * @summary List Parties
- * @link /parties/
+ * {@link /parties/}
  */
 export async function listPartiesPartiesGet(config: Partial<RequestConfig> = {}) {
     const res = await client<ListPartiesPartiesGetQueryResponse, Error, unknown>({ method: "GET", url: `/parties/`, ...config });

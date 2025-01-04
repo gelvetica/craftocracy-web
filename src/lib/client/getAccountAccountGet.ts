@@ -5,7 +5,7 @@ import type { GetAccountAccountGetQueryResponse } from "./types/GetAccountAccoun
 
  /**
  * @summary Get Account
- * @link /account/
+ * {@link /account/}
  */
 export async function getAccountAccountGet(config: Partial<RequestConfig> = {}) {
     const res = await client<GetAccountAccountGetQueryResponse, Error, unknown>({ method: "GET", url: `/account/`, ...config });
