@@ -1,0 +1,1 @@
+{"properties":{"body":{"type":"string","maxLength":10000,"title":"Body"},"timestamp":{"type":"string","format":"date-time","title":"Timestamp"}},"type":"object","required":["body","timestamp"],"title":"ProposalRevisionModel","x-readme-ref-name":"ProposalRevisionModel"}

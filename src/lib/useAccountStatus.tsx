@@ -24,6 +24,7 @@ export const useAccountStatus: [data: object | undefined, isLoading: boolean] = 
         }
     }
     if (data) {
+        sessionStorage.setItem("account", JSON.stringify(data))
         return {data: {
                 status: "registered",
                 ref: "/account",

@@ -1,0 +1,1 @@
+{"properties":{"title":{"type":"string","maxLength":70,"title":"Title"},"body":{"type":"string","maxLength":10000,"title":"Body"}},"type":"object","required":["title","body"],"title":"PostProposalModel","x-readme-ref-name":"PostProposalModel"}
