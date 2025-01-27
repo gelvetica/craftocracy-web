@@ -16,7 +16,9 @@ const ProposalsList = () => {
         <ul>
             {data.proposals.toReversed().map((proposal) => {
                 return (
-                    <li key={proposal.id}><Link href={`/proposals/${proposal.id}`}>{proposal.id}. {proposal.title}</Link></li>
+                    <div key={proposal.id} className={proposal.invalid ? 'underline decoration-red' : ""}>
+                    <li><Link href={`/proposals/${proposal.id}`}>{proposal.id}. {proposal.title}</Link></li>
+                    </div>
                 )
             })}
         </ul>
