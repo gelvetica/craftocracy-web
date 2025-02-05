@@ -1,0 +1,1 @@
+{"properties":{"body":{"type":"string","title":"Body"},"votes":{"type":"integer","title":"Votes"}},"type":"object","required":["body","votes"],"title":"PollChoiceResultsModel","x-readme-ref-name":"PollChoiceResultsModel"}

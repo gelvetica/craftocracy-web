@@ -34,6 +34,12 @@ const Navbar = () => {
                             className="strudel-dropdown strudel-dropdown-button text-xl px-4 hover:text-pink active:text-pink align-middle">Proposals
                         </Link>
                     </div>
+                    <div className="">
+                        <Link
+                            href="/polls"
+                            className="strudel-dropdown strudel-dropdown-button text-xl px-4 hover:text-pink active:text-pink align-middle">Polls
+                        </Link>
+                    </div>
                 </div>
                 <div className="inline-flex items-end">
                     {UserAccountComponent()}

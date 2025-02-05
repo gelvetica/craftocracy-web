@@ -1,0 +1,1 @@
+{"properties":{"body":{"type":"string","title":"Body"}},"type":"object","required":["body"],"title":"PollChoice","x-readme-ref-name":"PollChoice"}

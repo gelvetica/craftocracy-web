@@ -2,7 +2,8 @@ export const registrationModelPronounsEnum = {
     "they": "they",
     "she": "she",
     "he": "he",
-    "it": "it"
+    "it": "it",
+    "was": "was"
 } as const;
 
  export type RegistrationModelPronounsEnum = (typeof registrationModelPronounsEnum)[keyof typeof registrationModelPronounsEnum];
