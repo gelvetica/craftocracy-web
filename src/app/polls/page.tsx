@@ -18,7 +18,8 @@ function PollCard(poll: PollReferenceModel) {
 }
 
 function PollsList() {
-    const {data, error, isLoading} = useSWR("/proposals", getPollsPollsGet, {refreshInterval: 10000});
+    const {data, error, isLoading} = useSWR("/polls", getPollsPollsGet, {refreshInterval: 10000});
+    if (isLoading) return
     if (data) return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
             {data.polls.toReversed().map((poll) => {
