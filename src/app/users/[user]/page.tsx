@@ -11,3 +11,4 @@ export default function ExampleClientComponent() {
     if (user) return (
         <div className="text-2xl">{user.name}</div>
     )
+}
