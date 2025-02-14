@@ -54,7 +54,7 @@ export default function ElectionPage() {
     const {data: voterstatus} = useSWR("/am_i_even_allowed_to_vote", getAmIEvenAllowedToVoteAmIEvenAllowedToVoteGet)
     if (election && voterstatus) return (
         <div>
-            <p className="text-2xl">Reform MC Leadership Election</p>
+            <p className="text-2xl">Reform MC Presidential Primary</p>
             <p className="text-xs text-subtext0">to ensure confidentiality of ballots, please do not share screenshots of partially or completely filled out ballots.</p>
             <br/>
             <form onSubmit={cast_ballot}>
