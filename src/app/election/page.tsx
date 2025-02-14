@@ -32,10 +32,6 @@ function CandidateRow(candidate: string, party: string) {
             <td>{CandidateDescription(candidate, party)}</td>
             <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="first" name="first" value={candidate}
                        required/></td>
-            <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="second" name="second"
-                       value={candidate} required/></td>
-            <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="third" name="third" value={candidate}
-                       required/></td>
         </tr>
     )
 }
@@ -67,13 +63,10 @@ export default function ElectionPage() {
                     <tr>
                         <th>Candidate</th>
                         <th>1st</th>
-                        <th>2nd</th>
-                        <th>3rd</th>
                     </tr>
                     </thead>
                     <tbody>
-                    {CandidateRow(".Ihavenoname", "")}
-                    {CandidateRow("Kio", "")}
+                    {CandidateRow("milowyorhi", "")}
                     {CandidateRow("Pentagonal", "")}
                     </tbody>
                 </table>
