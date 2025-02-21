@@ -32,6 +32,12 @@ function CandidateRow(candidate: string, party: string) {
             <td>{CandidateDescription(candidate, party)}</td>
             <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="first" name="first" value={candidate}
                        required/></td>
+            <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="second" name="second" value={candidate}
+                       required/></td>
+            <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="third" name="third" value={candidate}
+                       required/></td>
+            <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="fourth" name="fourth" value={candidate}
+                       required/></td>
         </tr>
     )
 }
@@ -54,7 +60,7 @@ export default function ElectionPage() {
     const {data: voterstatus} = useSWR("/am_i_even_allowed_to_vote", getAmIEvenAllowedToVoteAmIEvenAllowedToVoteGet)
     if (election && voterstatus) return (
         <div>
-            <p className="text-2xl">Reform MC Presidential Primary</p>
+            <p className="text-2xl">3rd Strudel Presidential Election</p>
             <p className="text-xs text-subtext0">to ensure confidentiality of ballots, please do not share screenshots of partially or completely filled out ballots.</p>
             <br/>
             <form onSubmit={cast_ballot}>
@@ -63,11 +69,16 @@ export default function ElectionPage() {
                     <tr>
                         <th>Candidate</th>
                         <th>1st</th>
+                        <th>2nd</th>
+                        <th>3rd</th>
+                        <th>4th</th>
                     </tr>
                     </thead>
                     <tbody>
-                    {CandidateRow("milowyorhi", "")}
-                    {CandidateRow("Pentagonal", "")}
+                    {CandidateRow("CiCi / Sol", "Sky Shatter Industries")}
+                    {CandidateRow("dominoexists / PetBat", "Armored Party")}
+                    {CandidateRow("Pentagonal / poop barrel", "Reform MC")}
+                    {CandidateRow("milowyorhi / Alibaba", "spongebob season 3")}
                     </tbody>
                 </table>
                 <br/>
