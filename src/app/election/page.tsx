@@ -32,6 +32,14 @@ function CandidateRow(candidate: string, party: string) {
             <td>{CandidateDescription(candidate, party)}</td>
             <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="first" name="first" value={candidate}
                        required/></td>
+            <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="second" name="second" value={candidate}
+                       required/></td>
+            <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="third" name="third" value={candidate}
+                       required/></td>
+            <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="fourth" name="fourth" value={candidate}
+                       required/></td>
+            <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="fifth" name="fifth" value={candidate}
+                       required/></td>
         </tr>
     )
 }
@@ -63,11 +71,18 @@ export default function ElectionPage() {
                     <tr>
                         <th>Candidate</th>
                         <th>1st</th>
+                        <th>2nd</th>
+                        <th>3rd</th>
+                        <th>4th</th>
+                        <th>5th</th>
                     </tr>
                     </thead>
                     <tbody>
+                    {CandidateRow("tobster", "")}
+                    {CandidateRow("Big Todd", "")}
                     {CandidateRow("Pentagonal", "")}
                     {CandidateRow("v1scosity", "")}
+                    {CandidateRow("Releporp", "")}
                     </tbody>
                 </table>
                 <br/>
