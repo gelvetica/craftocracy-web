@@ -2,6 +2,7 @@ export type { AuthCallbackModel } from "./AuthCallbackModel.ts";
 export type { BallotFirstEnum, BallotSecondEnum, BallotThirdEnum, Ballot } from "./Ballot.ts";
 export type { CallbackCallbackGetQueryParams, CallbackCallbackGet200, CallbackCallbackGet422, CallbackCallbackGetQueryResponse, CallbackCallbackGetQuery } from "./CallbackCallbackGet.ts";
 export type { CastBallotElectionPost200, CastBallotElectionPost422, CastBallotElectionPostMutationRequest, CastBallotElectionPostMutationResponse, CastBallotElectionPostMutation } from "./CastBallotElectionPost.ts";
+export type { CastBallotPredictionVotePost200, CastBallotPredictionVotePost422, CastBallotPredictionVotePostMutationRequest, CastBallotPredictionVotePostMutationResponse, CastBallotPredictionVotePostMutation } from "./CastBallotPredictionVotePost.ts";
 export type { ElectionModel } from "./ElectionModel.ts";
 export type { GetAccountAccountGet200, GetAccountAccountGetQueryResponse, GetAccountAccountGetQuery } from "./GetAccountAccountGet.ts";
 export type { GetAmIEvenAllowedToVoteAmIEvenAllowedToVoteGet200, GetAmIEvenAllowedToVoteAmIEvenAllowedToVoteGetQueryResponse, GetAmIEvenAllowedToVoteAmIEvenAllowedToVoteGetQuery } from "./GetAmIEvenAllowedToVoteAmIEvenAllowedToVoteGet.ts";
@@ -31,6 +32,7 @@ export type { PostPollPollsPost200, PostPollPollsPost422, PostPollPollsPostMutat
 export type { PostPollVoteModel } from "./PostPollVoteModel.ts";
 export type { PostProposalModel } from "./PostProposalModel.ts";
 export type { PostProposalProposalsPost200, PostProposalProposalsPost422, PostProposalProposalsPostMutationRequest, PostProposalProposalsPostMutationResponse, PostProposalProposalsPostMutation } from "./PostProposalProposalsPost.ts";
+export type { PredictionResultsPredictionResultsGet200, PredictionResultsPredictionResultsGetQueryResponse, PredictionResultsPredictionResultsGetQuery } from "./PredictionResultsPredictionResultsGet.ts";
 export type { ProposalCollection } from "./ProposalCollection.ts";
 export type { ProposalModel } from "./ProposalModel.ts";
 export type { ProposalReferenceModel } from "./ProposalReferenceModel.ts";

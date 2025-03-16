@@ -6,11 +6,17 @@ import type { PollChoice } from "./PollChoice.ts";
     */
     title: string;
     /**
-     * @type array
+     * @type array | undefined
     */
-    choices: PollChoice[];
+    choices?: PollChoice[];
     /**
      * @type integer
     */
     proposal: number;
+    /**
+     * @default false
+     * @type boolean | undefined
+    */
+    secret?: boolean;
+    party?: (string | null);
 };

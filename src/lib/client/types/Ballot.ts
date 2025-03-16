@@ -1,23 +1,23 @@
 export const ballotFirstEnum = {
-    ".Ihavenoname": ".Ihavenoname",
-    "Kio": "Kio",
-    "Pentagonal": "Pentagonal"
+    "Gem / Haox": "Gem / Haox",
+    "Atlas / Azocir": "Atlas / Azocir",
+    "Pentagonal / Releporp": "Pentagonal / Releporp"
 } as const;
 
  export type BallotFirstEnum = (typeof ballotFirstEnum)[keyof typeof ballotFirstEnum];
 
  export const ballotSecondEnum = {
-    ".Ihavenoname": ".Ihavenoname",
-    "Kio": "Kio",
-    "Pentagonal": "Pentagonal"
+    "Gem / Haox": "Gem / Haox",
+    "Atlas / Azocir": "Atlas / Azocir",
+    "Pentagonal / Releporp": "Pentagonal / Releporp"
 } as const;
 
  export type BallotSecondEnum = (typeof ballotSecondEnum)[keyof typeof ballotSecondEnum];
 
  export const ballotThirdEnum = {
-    ".Ihavenoname": ".Ihavenoname",
-    "Kio": "Kio",
-    "Pentagonal": "Pentagonal"
+    "Gem / Haox": "Gem / Haox",
+    "Atlas / Azocir": "Atlas / Azocir",
+    "Pentagonal / Releporp": "Pentagonal / Releporp"
 } as const;
 
  export type BallotThirdEnum = (typeof ballotThirdEnum)[keyof typeof ballotThirdEnum];
