@@ -36,10 +36,6 @@ function CandidateRow(candidate: string, party: string) {
                        required/></td>
             <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="third" name="third" value={candidate}
                        required/></td>
-            <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="fourth" name="fourth" value={candidate}
-                       required/></td>
-            <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="fifth" name="fifth" value={candidate}
-                       required/></td>
         </tr>
     )
 }
@@ -62,7 +58,7 @@ export default function ElectionPage() {
     const {data: voterstatus} = useSWR("/am_i_even_allowed_to_vote", getAmIEvenAllowedToVoteAmIEvenAllowedToVoteGet)
     if (election && voterstatus) return (
         <div>
-            <p className="text-2xl">Reform MC Presidential Primary</p>
+            <p className="text-2xl">4th Strudel Presidential Election</p>
             <p className="text-xs text-subtext0">to ensure confidentiality of ballots, please do not share screenshots of partially or completely filled out ballots.</p>
             <br/>
             <form onSubmit={cast_ballot}>
@@ -73,16 +69,12 @@ export default function ElectionPage() {
                         <th>1st</th>
                         <th>2nd</th>
                         <th>3rd</th>
-                        <th>4th</th>
-                        <th>5th</th>
                     </tr>
                     </thead>
                     <tbody>
-                    {CandidateRow("tobster", "")}
-                    {CandidateRow("Big Todd", "")}
-                    {CandidateRow("Pentagonal", "")}
-                    {CandidateRow("v1scosity", "")}
-                    {CandidateRow("Releporp", "")}
+                    {CandidateRow("Gem / Haox", "Armored Party")}
+                    {CandidateRow("Atlas / Azocir", "Sky Shatter Industries")}
+                    {CandidateRow("Pentagonal / Releporp", "Reform MC")}
                     </tbody>
                 </table>
                 <br/>
