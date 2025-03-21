@@ -7,7 +7,7 @@ import {SWRProvider} from "@/components/SWRProvider"
 
 export const metadata: Metadata = {
   title: "Craftocracy",
-  description: "listen <@705481136926752820> im an evil individual dont mess with me",
+  description: "minecraft's most democratic server",
 };
 
 export default function RootLayout({
