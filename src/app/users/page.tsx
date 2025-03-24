@@ -42,7 +42,7 @@ export default function Home() {
         <div>
             <p className="text-2xl">Users</p>
             <Suspense fallback={(<div>loading...</div>)}>
-            {UsersList()}
+                <UsersList/>
             </Suspense>
         </div>
     );
