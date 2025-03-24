@@ -1,8 +1,8 @@
-import type { ProposalReferenceModel } from "./ProposalReferenceModel.ts";
+import type { ProposalReferenceModel } from './ProposalReferenceModel.ts'
 
- export type ProposalCollection = {
-    /**
-     * @type array
-    */
-    proposals: ProposalReferenceModel[];
-};
+export type ProposalCollection = {
+  /**
+   * @type array
+   */
+  proposals: ProposalReferenceModel[]
+}

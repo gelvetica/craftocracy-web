@@ -10,7 +10,7 @@
     "generate-client": "kubb generate"
   },
   "dependencies": {
-    "@kubb/cli": "^3.0.8",
+    "@kubb/cli": "^3.6.4",
     "@kubb/core": "^3.0.8",
     "@kubb/plugin-client": "^3.0.8",
     "@kubb/plugin-ts": "^3.0.8",
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@catppuccin/tailwindcss": "^0.1.6",
+    "@kubb/plugin-swr": "^3.6.4",
     "@tailwindcss/forms": "^0.5.9",
     "@types/node": "^20",
     "@types/react": "^18",

@@ -1,10 +1,12 @@
 export type PostProposalModel = {
-    /**
-     * @type string
-    */
-    title: string;
-    /**
-     * @type string
-    */
-    body: string;
-};
+  /**
+   * @maxLength 70
+   * @type string
+   */
+  title: string
+  /**
+   * @maxLength 10000
+   * @type string
+   */
+  body: string
+}

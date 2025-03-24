@@ -1,6 +1,6 @@
 export type PollChoice = {
-    /**
-     * @type string
-    */
-    body: string;
-};
+  /**
+   * @type string
+   */
+  body: string
+}

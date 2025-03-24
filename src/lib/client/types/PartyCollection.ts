@@ -1,8 +1,8 @@
-import type { PartyModel } from "./PartyModel.ts";
+import type { PartyModel } from './PartyModel.ts'
 
- export type PartyCollection = {
-    /**
-     * @type array
-    */
-    parties: PartyModel[];
-};
+export type PartyCollection = {
+  /**
+   * @type array
+   */
+  parties: PartyModel[]
+}

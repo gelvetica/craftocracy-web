@@ -1,6 +1,6 @@
 export type PostPollVoteModel = {
-    /**
-     * @type string
-    */
-    body: string;
-};
+  /**
+   * @type string
+   */
+  body: string
+}

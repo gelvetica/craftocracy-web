@@ -1,9 +1,9 @@
-import type { UserModel } from "./UserModel.ts";
+import type { UserModel } from './UserModel.ts'
 
- export type PollVoterModel = {
-    /**
-     * @type object
-    */
-    user: UserModel;
-    choice: (string | null);
-};
+export type PollVoterModel = {
+  /**
+   * @type object
+   */
+  user: UserModel
+  choice: string | null
+}

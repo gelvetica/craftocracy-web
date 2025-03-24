@@ -1,6 +1,7 @@
 export type ReviseProposalModel = {
-    /**
-     * @type string
-    */
-    body: string;
-};
+  /**
+   * @maxLength 10000
+   * @type string
+   */
+  body: string
+}

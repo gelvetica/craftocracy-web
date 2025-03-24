@@ -1,8 +1,9 @@
 'use client'
 
-import {listUsersUsersGet, UserPartyModel} from "@/lib/client";
-import useSWR from "swr";
+import {UserPartyModel} from "@/lib/client";
+import {useListUsersUsersGet} from "@/lib/client/hooks";
 import Link from "next/link";
+import {useSearchParams} from "next/navigation";
 
 function resolve_party_reference(party: UserPartyModel) {
     if (party === null) {
@@ -16,10 +17,11 @@ function resolve_party_reference(party: UserPartyModel) {
 }
 
 const UsersList = () => {
-    const { data, error, isLoading } = useSWR("/users", listUsersUsersGet);
+
+    const { data, error, isLoading } = useListUsersUsersGet({...{inactive: false}, ...Object.fromEntries(useSearchParams())});
     if (error) return <div>failed to load</div>
     if (isLoading) return <div>loading...</div>
-    return (
+    if (data) return (
         <ul>
             {data.users.map((user) => {
                 const party = resolve_party_reference(user.party);

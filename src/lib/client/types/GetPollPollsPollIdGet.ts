@@ -1,27 +1,27 @@
-import type { HttpValidationError } from "./HttpValidationError.ts";
-import type { PollModel } from "./PollModel.ts";
+import type { HTTPValidationError } from './HTTPValidationError.ts'
+import type { PollModel } from './PollModel.ts'
 
- export type GetPollPollsPollIdGetPathParams = {
-    /**
-     * @type string
-    */
-    poll_id: string;
-};
+export type GetPollPollsPollIdGetPathParams = {
+  /**
+   * @type string
+   */
+  poll_id: string
+}
 
- /**
+/**
  * @description Successful Response
-*/
-export type GetPollPollsPollIdGet200 = PollModel;
+ */
+export type GetPollPollsPollIdGet200 = PollModel
 
- /**
+/**
  * @description Validation Error
-*/
-export type GetPollPollsPollIdGet422 = HttpValidationError;
+ */
+export type GetPollPollsPollIdGet422 = HTTPValidationError
 
- export type GetPollPollsPollIdGetQueryResponse = GetPollPollsPollIdGet200;
+export type GetPollPollsPollIdGetQueryResponse = GetPollPollsPollIdGet200
 
- export type GetPollPollsPollIdGetQuery = {
-    Response: GetPollPollsPollIdGet200;
-    PathParams: GetPollPollsPollIdGetPathParams;
-    Errors: GetPollPollsPollIdGet422;
-};
+export type GetPollPollsPollIdGetQuery = {
+  Response: GetPollPollsPollIdGet200
+  PathParams: GetPollPollsPollIdGetPathParams
+  Errors: GetPollPollsPollIdGet422
+}

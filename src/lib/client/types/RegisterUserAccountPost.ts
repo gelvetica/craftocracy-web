@@ -1,23 +1,23 @@
-import type { HttpValidationError } from "./HttpValidationError.ts";
-import type { RegistrationModel } from "./RegistrationModel.ts";
-import type { UserAccountModel } from "./UserAccountModel.ts";
+import type { HTTPValidationError } from './HTTPValidationError.ts'
+import type { RegistrationModel } from './RegistrationModel.ts'
+import type { UserAccountModel } from './UserAccountModel.ts'
 
- /**
+/**
  * @description Successful Response
-*/
-export type RegisterUserAccountPost201 = UserAccountModel;
+ */
+export type RegisterUserAccountPost201 = UserAccountModel
 
- /**
+/**
  * @description Validation Error
-*/
-export type RegisterUserAccountPost422 = HttpValidationError;
+ */
+export type RegisterUserAccountPost422 = HTTPValidationError
 
- export type RegisterUserAccountPostMutationRequest = RegistrationModel;
+export type RegisterUserAccountPostMutationRequest = RegistrationModel
 
- export type RegisterUserAccountPostMutationResponse = RegisterUserAccountPost201;
+export type RegisterUserAccountPostMutationResponse = RegisterUserAccountPost201
 
- export type RegisterUserAccountPostMutation = {
-    Response: RegisterUserAccountPost201;
-    Request: RegisterUserAccountPostMutationRequest;
-    Errors: RegisterUserAccountPost422;
-};
+export type RegisterUserAccountPostMutation = {
+  Response: RegisterUserAccountPost201
+  Request: RegisterUserAccountPostMutationRequest
+  Errors: RegisterUserAccountPost422
+}

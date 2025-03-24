@@ -1,8 +1,8 @@
-import type { PollReferenceModel } from "./PollReferenceModel.ts";
+import type { PollReferenceModel } from './PollReferenceModel.ts'
 
- export type PollCollection = {
-    /**
-     * @type array
-    */
-    polls: PollReferenceModel[];
-};
+export type PollCollection = {
+  /**
+   * @type array
+   */
+  polls: PollReferenceModel[]
+}

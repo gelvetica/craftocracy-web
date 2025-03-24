@@ -1,8 +1,8 @@
-import type { UserModel } from "./UserModel.ts";
+import type { UserModel } from './UserModel.ts'
 
- export type UserCollection = {
-    /**
-     * @type array
-    */
-    users: UserModel[];
-};
+export type UserCollection = {
+  /**
+   * @type array
+   */
+  users: UserModel[]
+}
