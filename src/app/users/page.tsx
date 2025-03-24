@@ -4,6 +4,7 @@ import {UserPartyModel} from "@/lib/client";
 import {useListUsersUsersGet} from "@/lib/client/hooks";
 import Link from "next/link";
 import {useSearchParams} from "next/navigation";
+import { Suspense } from 'react'
 
 function resolve_party_reference(party: UserPartyModel) {
     if (party === null) {
@@ -40,7 +41,9 @@ export default function Home() {
     return (
         <div>
             <p className="text-2xl">Users</p>
+            <Suspense fallback={(<div>loading...</div>)}>
             {UsersList()}
+            </Suspense>
         </div>
     );
 }
