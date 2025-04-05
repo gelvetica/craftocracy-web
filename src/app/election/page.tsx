@@ -36,6 +36,8 @@ function CandidateRow(candidate: string, party: string) {
                        required/></td>
             <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="third" name="third" value={candidate}
                        required/></td>
+            <td><input onClick={BallotOnSelect} className="mx-8" type="radio" id="fourth" name="fourth" value={candidate}
+                       required/></td>
         </tr>
     )
 }
@@ -58,7 +60,7 @@ export default function ElectionPage() {
     const {data: voterstatus} = useSWR("/am_i_even_allowed_to_vote", getAmIEvenAllowedToVoteAmIEvenAllowedToVoteGet)
     if (election && voterstatus) return (
         <div>
-            <p className="text-2xl">5th Election - Sky Shatter Industries Primary</p>
+            <p className="text-2xl">5th Strudel Presidential Election</p>
             <p className="text-xs text-subtext0">to ensure confidentiality of ballots, please do not share screenshots of partially or completely filled out ballots.</p>
             <br/>
             <form onSubmit={cast_ballot}>
@@ -69,12 +71,14 @@ export default function ElectionPage() {
                         <th>1st</th>
                         <th>2nd</th>
                         <th>3rd</th>
+                        <th>4th</th>
                     </tr>
                     </thead>
                     <tbody>
-                    {CandidateRow("General D", "")}
-                    {CandidateRow("Atlas", "")}
-                    {CandidateRow("CiCi", "")}
+                    {CandidateRow("Lemon / Xboy", "The Coolest Party")}
+                    {CandidateRow("Pentagonal / v1scosity", "Reform MC")}
+                    {CandidateRow("Gem / PetBat", "Armored Party")}
+                    {CandidateRow("CiCi / General D", "Sky Shatter Industries")}
                     </tbody>
                 </table>
                 <br/>
