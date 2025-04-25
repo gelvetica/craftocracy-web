@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import React from "react";
-import useSWR from "swr";
-import {getPollsPollsGet, PollReferenceModel} from "@/lib/client";
+import {useGetPollsPollsGet} from "@/lib/client/hooks";
+import {PollReferenceModel} from "@/lib/client";
 import ResultsDisplay from "@/app/polls/resultsdisplay";
 
 function PollCard(poll: PollReferenceModel) {
@@ -18,7 +18,8 @@ function PollCard(poll: PollReferenceModel) {
 }
 
 function PollsList() {
-    const {data, error, isLoading} = useSWR("/polls", getPollsPollsGet, {refreshInterval: 10000});
+    //"/polls", getPollsPollsGet,
+    const {data, isLoading} = useGetPollsPollsGet(undefined,{query: {refreshInterval: 10000}});
     if (isLoading) return
     if (data) return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">

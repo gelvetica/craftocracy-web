@@ -1,16 +1,14 @@
 'use client'
 
-import {getProposalsProposalsGet} from "@/lib/client";
-import useSWR from "swr";
+import {useGetProposalsProposalsGet} from "@/lib/client/hooks";
 import Link from "next/link";
 import {useAccountStatus} from "@/lib/useAccountStatus";
 import React from "react";
 
 
 const ProposalsList = () => {
-    const { data, error, isLoading } = useSWR("/proposals", getProposalsProposalsGet);
+    const { data, isLoading } = useGetProposalsProposalsGet();
 
-    if (error) return <div>failed to load</div>
     if (isLoading) return <div>loading...</div>
     return (
         <ul>
