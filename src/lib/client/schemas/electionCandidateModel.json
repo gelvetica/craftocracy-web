@@ -1,0 +1,1 @@
+{"properties":{"user":{"anyOf":[{"type":"string"},{"type":"null"}],"title":"User"},"name":{"type":"string","title":"Name"}},"type":"object","required":["name"],"title":"ElectionCandidateModel","x-readme-ref-name":"ElectionCandidateModel"}

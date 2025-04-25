@@ -1,9 +1,9 @@
 import client from '@/lib/axiosInstance'
 import useSWR from 'swr'
-import type { GetPollsPollsGetQueryResponse } from '../../types/GetPollsPollsGet.ts'
+import type { GetPollsPollsGetQueryResponse, GetPollsPollsGetQueryParams, GetPollsPollsGet422 } from '../../types/GetPollsPollsGet.ts'
 import type { RequestConfig, ResponseErrorConfig } from '@/lib/axiosInstance'
 
-export const getPollsPollsGetQueryKey = () => [{ url: '/polls/' }] as const
+export const getPollsPollsGetQueryKey = (params?: GetPollsPollsGetQueryParams) => [{ url: '/polls/' }, ...(params ? [params] : [])] as const
 
 export type GetPollsPollsGetQueryKey = ReturnType<typeof getPollsPollsGetQueryKey>
 
@@ -11,17 +11,22 @@ export type GetPollsPollsGetQueryKey = ReturnType<typeof getPollsPollsGetQueryKe
  * @summary Get Polls
  * {@link /polls/}
  */
-export async function getPollsPollsGet(config: Partial<RequestConfig> & { client?: typeof client } = {}) {
+export async function getPollsPollsGet(params?: GetPollsPollsGetQueryParams, config: Partial<RequestConfig> & { client?: typeof client } = {}) {
   const { client: request = client, ...requestConfig } = config
 
-  const res = await request<GetPollsPollsGetQueryResponse, ResponseErrorConfig<Error>, unknown>({ method: 'GET', url: `/polls/`, ...requestConfig })
+  const res = await request<GetPollsPollsGetQueryResponse, ResponseErrorConfig<GetPollsPollsGet422>, unknown>({
+    method: 'GET',
+    url: `/polls/`,
+    params,
+    ...requestConfig,
+  })
   return res.data
 }
 
-export function getPollsPollsGetQueryOptions(config: Partial<RequestConfig> & { client?: typeof client } = {}) {
+export function getPollsPollsGetQueryOptions(params?: GetPollsPollsGetQueryParams, config: Partial<RequestConfig> & { client?: typeof client } = {}) {
   return {
     fetcher: async () => {
-      return getPollsPollsGet(config)
+      return getPollsPollsGet(params, config)
     },
   }
 }
@@ -31,18 +36,19 @@ export function getPollsPollsGetQueryOptions(config: Partial<RequestConfig> & { 
  * {@link /polls/}
  */
 export function useGetPollsPollsGet(
+  params?: GetPollsPollsGetQueryParams,
   options: {
-    query?: Parameters<typeof useSWR<GetPollsPollsGetQueryResponse, ResponseErrorConfig<Error>, GetPollsPollsGetQueryKey | null, any>>[2]
+    query?: Parameters<typeof useSWR<GetPollsPollsGetQueryResponse, ResponseErrorConfig<GetPollsPollsGet422>, GetPollsPollsGetQueryKey | null, any>>[2]
     client?: Partial<RequestConfig> & { client?: typeof client }
     shouldFetch?: boolean
   } = {},
 ) {
   const { query: queryOptions, client: config = {}, shouldFetch = true } = options ?? {}
 
-  const queryKey = getPollsPollsGetQueryKey()
+  const queryKey = getPollsPollsGetQueryKey(params)
 
-  return useSWR<GetPollsPollsGetQueryResponse, ResponseErrorConfig<Error>, GetPollsPollsGetQueryKey | null>(shouldFetch ? queryKey : null, {
-    ...getPollsPollsGetQueryOptions(config),
+  return useSWR<GetPollsPollsGetQueryResponse, ResponseErrorConfig<GetPollsPollsGet422>, GetPollsPollsGetQueryKey | null>(shouldFetch ? queryKey : null, {
+    ...getPollsPollsGetQueryOptions(params, config),
     ...queryOptions,
   })
 }

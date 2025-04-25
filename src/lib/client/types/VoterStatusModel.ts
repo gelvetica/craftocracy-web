@@ -1,10 +1,22 @@
 export type VoterStatusModel = {
   /**
-   * @type boolean
-   */
-  allowed: boolean
-  /**
    * @type string
    */
-  reason: string
+  id: string
+  /**
+   * @type boolean
+   */
+  open: boolean
+  /**
+   * @type boolean
+   */
+  user_is_voter: boolean
+  /**
+   * @type boolean
+   */
+  user_has_voted: boolean
+  /**
+   * @type boolean
+   */
+  user_can_vote: boolean
 }

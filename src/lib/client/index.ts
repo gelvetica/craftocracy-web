@@ -1,5 +1,11 @@
 export type { GetAccountAccountGetQueryKey } from './hooks/AccountHooks/useGetAccountAccountGet.ts'
 export type { RegisterUserAccountPostMutationKey } from './hooks/AccountHooks/useRegisterUserAccountPost.ts'
+export type { AddVotersElectionsElectionAddVotersPostMutationKey } from './hooks/ElectionsHooks/useAddVotersElectionsElectionAddVotersPost.ts'
+export type { GetElectionElectionsElectionGetQueryKey } from './hooks/ElectionsHooks/useGetElectionElectionsElectionGet.ts'
+export type { GetVoterStatusElectionsElectionVoterStatusGetQueryKey } from './hooks/ElectionsHooks/useGetVoterStatusElectionsElectionVoterStatusGet.ts'
+export type { PostElectionCandidateElectionsElectionCandidatePostMutationKey } from './hooks/ElectionsHooks/usePostElectionCandidateElectionsElectionCandidatePost.ts'
+export type { PostElectionElectionsPostMutationKey } from './hooks/ElectionsHooks/usePostElectionElectionsPost.ts'
+export type { PostElectionVoteElectionsElectionVotePostMutationKey } from './hooks/ElectionsHooks/usePostElectionVoteElectionsElectionVotePost.ts'
 export type { GetPollPollsPollIdGetQueryKey } from './hooks/PollsHooks/useGetPollPollsPollIdGet.ts'
 export type { GetPollsPollsGetQueryKey } from './hooks/PollsHooks/useGetPollsPollsGet.ts'
 export type { PollVotePollsPollIdVotePostMutationKey } from './hooks/PollsHooks/usePollVotePollsPollIdVotePost.ts'
@@ -9,16 +15,19 @@ export type { GetProposalsProposalsGetQueryKey } from './hooks/ProposalsHooks/us
 export type { PostProposalProposalsPostMutationKey } from './hooks/ProposalsHooks/usePostProposalProposalsPost.ts'
 export type { ReviseProposalProposalsProposalRevisePostMutationKey } from './hooks/ProposalsHooks/useReviseProposalProposalsProposalRevisePost.ts'
 export type { CallbackCallbackGetQueryKey } from './hooks/undefinedHooks/useCallbackCallbackGet.ts'
-export type { CastBallotElectionPostMutationKey } from './hooks/undefinedHooks/useCastBallotElectionPost.ts'
-export type { GetAmIEvenAllowedToVoteAmIEvenAllowedToVoteGetQueryKey } from './hooks/undefinedHooks/useGetAmIEvenAllowedToVoteAmIEvenAllowedToVoteGet.ts'
-export type { GetElectionElectionGetQueryKey } from './hooks/undefinedHooks/useGetElectionElectionGet.ts'
 export type { GetPartyPartiesPartyIdGetQueryKey } from './hooks/undefinedHooks/useGetPartyPartiesPartyIdGet.ts'
 export type { ListPartiesPartiesGetQueryKey } from './hooks/undefinedHooks/useListPartiesPartiesGet.ts'
 export type { ServerInfoGetQueryKey } from './hooks/undefinedHooks/useServerInfoGet.ts'
 export type { GetUserUsersUserIdGetQueryKey } from './hooks/UsersHooks/useGetUserUsersUserIdGet.ts'
 export type { ListUsersUsersGetQueryKey } from './hooks/UsersHooks/useListUsersUsersGet.ts'
+export type {
+  AddVotersElectionsElectionAddVotersPostPathParams,
+  AddVotersElectionsElectionAddVotersPost200,
+  AddVotersElectionsElectionAddVotersPost422,
+  AddVotersElectionsElectionAddVotersPostMutationResponse,
+  AddVotersElectionsElectionAddVotersPostMutation,
+} from './types/AddVotersElectionsElectionAddVotersPost.ts'
 export type { AuthCallbackModel } from './types/AuthCallbackModel.ts'
-export type { BallotFirstEnum, Ballot } from './types/Ballot.ts'
 export type {
   CallbackCallbackGetQueryParams,
   CallbackCallbackGet200,
@@ -26,21 +35,20 @@ export type {
   CallbackCallbackGetQueryResponse,
   CallbackCallbackGetQuery,
 } from './types/CallbackCallbackGet.ts'
-export type {
-  CastBallotElectionPost200,
-  CastBallotElectionPost422,
-  CastBallotElectionPostMutationRequest,
-  CastBallotElectionPostMutationResponse,
-  CastBallotElectionPostMutation,
-} from './types/CastBallotElectionPost.ts'
-export type { ElectionModel } from './types/ElectionModel.ts'
+export type { ElectionBallot } from './types/ElectionBallot.ts'
+export type { ElectionCampaignModel } from './types/ElectionCampaignModel.ts'
+export type { ElectionCandidateModel } from './types/ElectionCandidateModel.ts'
+export type { ElectionTicketModel } from './types/ElectionTicketModel.ts'
+export type { ElectionVoterModel } from './types/ElectionVoterModel.ts'
 export type { GetAccountAccountGet200, GetAccountAccountGetQueryResponse, GetAccountAccountGetQuery } from './types/GetAccountAccountGet.ts'
 export type {
-  GetAmIEvenAllowedToVoteAmIEvenAllowedToVoteGet200,
-  GetAmIEvenAllowedToVoteAmIEvenAllowedToVoteGetQueryResponse,
-  GetAmIEvenAllowedToVoteAmIEvenAllowedToVoteGetQuery,
-} from './types/GetAmIEvenAllowedToVoteAmIEvenAllowedToVoteGet.ts'
-export type { GetElectionElectionGet200, GetElectionElectionGetQueryResponse, GetElectionElectionGetQuery } from './types/GetElectionElectionGet.ts'
+  GetElectionElectionsElectionGetPathParams,
+  GetElectionElectionsElectionGet200,
+  GetElectionElectionsElectionGet422,
+  GetElectionElectionsElectionGetQueryResponse,
+  GetElectionElectionsElectionGetQuery,
+} from './types/GetElectionElectionsElectionGet.ts'
+export type { GetElectionModel } from './types/GetElectionModel.ts'
 export type {
   GetPartyPartiesPartyIdGetPathParams,
   GetPartyPartiesPartyIdGet200,
@@ -55,7 +63,13 @@ export type {
   GetPollPollsPollIdGetQueryResponse,
   GetPollPollsPollIdGetQuery,
 } from './types/GetPollPollsPollIdGet.ts'
-export type { GetPollsPollsGet200, GetPollsPollsGetQueryResponse, GetPollsPollsGetQuery } from './types/GetPollsPollsGet.ts'
+export type {
+  GetPollsPollsGetQueryParams,
+  GetPollsPollsGet200,
+  GetPollsPollsGet422,
+  GetPollsPollsGetQueryResponse,
+  GetPollsPollsGetQuery,
+} from './types/GetPollsPollsGet.ts'
 export type {
   GetProposalProposalsProposalGetPathParams,
   GetProposalProposalsProposalGet200,
@@ -63,7 +77,13 @@ export type {
   GetProposalProposalsProposalGetQueryResponse,
   GetProposalProposalsProposalGetQuery,
 } from './types/GetProposalProposalsProposalGet.ts'
-export type { GetProposalsProposalsGet200, GetProposalsProposalsGetQueryResponse, GetProposalsProposalsGetQuery } from './types/GetProposalsProposalsGet.ts'
+export type {
+  GetProposalsProposalsGetQueryParams,
+  GetProposalsProposalsGet200,
+  GetProposalsProposalsGet422,
+  GetProposalsProposalsGetQueryResponse,
+  GetProposalsProposalsGetQuery,
+} from './types/GetProposalsProposalsGet.ts'
 export type {
   GetUserUsersUserIdGetPathParams,
   GetUserUsersUserIdGet200,
@@ -71,7 +91,16 @@ export type {
   GetUserUsersUserIdGetQueryResponse,
   GetUserUsersUserIdGetQuery,
 } from './types/GetUserUsersUserIdGet.ts'
+export type {
+  GetVoterStatusElectionsElectionVoterStatusGetPathParams,
+  GetVoterStatusElectionsElectionVoterStatusGet200,
+  GetVoterStatusElectionsElectionVoterStatusGet422,
+  GetVoterStatusElectionsElectionVoterStatusGetQueryResponse,
+  GetVoterStatusElectionsElectionVoterStatusGetQuery,
+} from './types/GetVoterStatusElectionsElectionVoterStatusGet.ts'
 export type { HTTPValidationError } from './types/HTTPValidationError.ts'
+export type { InsertElectionCandidateModel } from './types/InsertElectionCandidateModel.ts'
+export type { InsertElectionModel } from './types/InsertElectionModel.ts'
 export type { ListPartiesPartiesGet200, ListPartiesPartiesGetQueryResponse, ListPartiesPartiesGetQuery } from './types/ListPartiesPartiesGet.ts'
 export type {
   ListUsersUsersGetQueryParams,
@@ -82,7 +111,6 @@ export type {
 } from './types/ListUsersUsersGet.ts'
 export type { PartyCollection } from './types/PartyCollection.ts'
 export type { PartyLeaderModel } from './types/PartyLeaderModel.ts'
-export type { PartyMemberModel } from './types/PartyMemberModel.ts'
 export type { PartyModel } from './types/PartyModel.ts'
 export type { PollChoice } from './types/PollChoice.ts'
 export type { PollChoiceResultsModel } from './types/PollChoiceResultsModel.ts'
@@ -98,6 +126,29 @@ export type {
   PollVotePollsPollIdVotePostMutation,
 } from './types/PollVotePollsPollIdVotePost.ts'
 export type { PollVoterModel } from './types/PollVoterModel.ts'
+export type {
+  PostElectionCandidateElectionsElectionCandidatePostPathParams,
+  PostElectionCandidateElectionsElectionCandidatePost200,
+  PostElectionCandidateElectionsElectionCandidatePost422,
+  PostElectionCandidateElectionsElectionCandidatePostMutationRequest,
+  PostElectionCandidateElectionsElectionCandidatePostMutationResponse,
+  PostElectionCandidateElectionsElectionCandidatePostMutation,
+} from './types/PostElectionCandidateElectionsElectionCandidatePost.ts'
+export type {
+  PostElectionElectionsPost200,
+  PostElectionElectionsPost422,
+  PostElectionElectionsPostMutationRequest,
+  PostElectionElectionsPostMutationResponse,
+  PostElectionElectionsPostMutation,
+} from './types/PostElectionElectionsPost.ts'
+export type {
+  PostElectionVoteElectionsElectionVotePostPathParams,
+  PostElectionVoteElectionsElectionVotePost200,
+  PostElectionVoteElectionsElectionVotePost422,
+  PostElectionVoteElectionsElectionVotePostMutationRequest,
+  PostElectionVoteElectionsElectionVotePostMutationResponse,
+  PostElectionVoteElectionsElectionVotePostMutation,
+} from './types/PostElectionVoteElectionsElectionVotePost.ts'
 export type { PostPollModel } from './types/PostPollModel.ts'
 export type {
   PostPollPollsPost200,
@@ -136,6 +187,7 @@ export type {
   ReviseProposalProposalsProposalRevisePostMutationResponse,
   ReviseProposalProposalsProposalRevisePostMutation,
 } from './types/ReviseProposalProposalsProposalRevisePost.ts'
+export type { ScheduleModel } from './types/ScheduleModel.ts'
 export type { ServerInfoGet200, ServerInfoGetQueryResponse, ServerInfoGetQuery } from './types/ServerInfoGet.ts'
 export type { ServerInfoModel } from './types/ServerInfoModel.ts'
 export type { UserAccountModel } from './types/UserAccountModel.ts'
@@ -151,6 +203,38 @@ export {
   useGetAccountAccountGet,
 } from './hooks/AccountHooks/useGetAccountAccountGet.ts'
 export { registerUserAccountPostMutationKey, registerUserAccountPost, useRegisterUserAccountPost } from './hooks/AccountHooks/useRegisterUserAccountPost.ts'
+export {
+  addVotersElectionsElectionAddVotersPostMutationKey,
+  addVotersElectionsElectionAddVotersPost,
+  useAddVotersElectionsElectionAddVotersPost,
+} from './hooks/ElectionsHooks/useAddVotersElectionsElectionAddVotersPost.ts'
+export {
+  getElectionElectionsElectionGetQueryKey,
+  getElectionElectionsElectionGet,
+  getElectionElectionsElectionGetQueryOptions,
+  useGetElectionElectionsElectionGet,
+} from './hooks/ElectionsHooks/useGetElectionElectionsElectionGet.ts'
+export {
+  getVoterStatusElectionsElectionVoterStatusGetQueryKey,
+  getVoterStatusElectionsElectionVoterStatusGet,
+  getVoterStatusElectionsElectionVoterStatusGetQueryOptions,
+  useGetVoterStatusElectionsElectionVoterStatusGet,
+} from './hooks/ElectionsHooks/useGetVoterStatusElectionsElectionVoterStatusGet.ts'
+export {
+  postElectionCandidateElectionsElectionCandidatePostMutationKey,
+  postElectionCandidateElectionsElectionCandidatePost,
+  usePostElectionCandidateElectionsElectionCandidatePost,
+} from './hooks/ElectionsHooks/usePostElectionCandidateElectionsElectionCandidatePost.ts'
+export {
+  postElectionElectionsPostMutationKey,
+  postElectionElectionsPost,
+  usePostElectionElectionsPost,
+} from './hooks/ElectionsHooks/usePostElectionElectionsPost.ts'
+export {
+  postElectionVoteElectionsElectionVotePostMutationKey,
+  postElectionVoteElectionsElectionVotePost,
+  usePostElectionVoteElectionsElectionVotePost,
+} from './hooks/ElectionsHooks/usePostElectionVoteElectionsElectionVotePost.ts'
 export {
   getPollPollsPollIdGetQueryKey,
   getPollPollsPollIdGet,
@@ -192,19 +276,6 @@ export {
   callbackCallbackGetQueryOptions,
   useCallbackCallbackGet,
 } from './hooks/undefinedHooks/useCallbackCallbackGet.ts'
-export { castBallotElectionPostMutationKey, castBallotElectionPost, useCastBallotElectionPost } from './hooks/undefinedHooks/useCastBallotElectionPost.ts'
-export {
-  getAmIEvenAllowedToVoteAmIEvenAllowedToVoteGetQueryKey,
-  getAmIEvenAllowedToVoteAmIEvenAllowedToVoteGet,
-  getAmIEvenAllowedToVoteAmIEvenAllowedToVoteGetQueryOptions,
-  useGetAmIEvenAllowedToVoteAmIEvenAllowedToVoteGet,
-} from './hooks/undefinedHooks/useGetAmIEvenAllowedToVoteAmIEvenAllowedToVoteGet.ts'
-export {
-  getElectionElectionGetQueryKey,
-  getElectionElectionGet,
-  getElectionElectionGetQueryOptions,
-  useGetElectionElectionGet,
-} from './hooks/undefinedHooks/useGetElectionElectionGet.ts'
 export {
   getPartyPartiesPartyIdGetQueryKey,
   getPartyPartiesPartyIdGet,
@@ -225,5 +296,4 @@ export {
   useGetUserUsersUserIdGet,
 } from './hooks/UsersHooks/useGetUserUsersUserIdGet.ts'
 export { listUsersUsersGetQueryKey, listUsersUsersGet, listUsersUsersGetQueryOptions, useListUsersUsersGet } from './hooks/UsersHooks/useListUsersUsersGet.ts'
-export { ballotFirstEnum } from './types/Ballot.ts'
 export { registrationModelPronounsEnum } from './types/RegistrationModel.ts'

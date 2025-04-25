@@ -1,0 +1,1 @@
+{"properties":{"user":{"type":"string","title":"User"},"voted":{"type":"boolean","title":"Voted"}},"type":"object","required":["user","voted"],"title":"ElectionVoterModel","x-readme-ref-name":"ElectionVoterModel"}

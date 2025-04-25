@@ -1,0 +1,1 @@
+{"properties":{"rankings":{"items":{"type":"string"},"type":"array","title":"Rankings"}},"type":"object","required":["rankings"],"title":"ElectionBallot","x-readme-ref-name":"ElectionBallot"}

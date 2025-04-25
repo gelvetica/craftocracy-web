@@ -1,0 +1,1 @@
+{"properties":{"party":{"anyOf":[{"type":"string"},{"type":"null"}],"title":"Party"},"name":{"type":"string","title":"Name"}},"type":"object","required":["name"],"title":"ElectionCampaignModel","x-readme-ref-name":"ElectionCampaignModel"}
