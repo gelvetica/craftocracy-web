@@ -2,21 +2,11 @@ import client from '@/lib/axiosInstance'
 import useSWR from 'swr'
 import type { GetAccountAccountGetQueryResponse } from '../../types/GetAccountAccountGet.ts'
 import type { RequestConfig, ResponseErrorConfig } from '@/lib/axiosInstance'
+import { getAccountAccountGet } from '../../getAccountAccountGet.ts'
 
 export const getAccountAccountGetQueryKey = () => [{ url: '/account/' }] as const
 
 export type GetAccountAccountGetQueryKey = ReturnType<typeof getAccountAccountGetQueryKey>
-
-/**
- * @summary Get Account
- * {@link /account/}
- */
-export async function getAccountAccountGet(config: Partial<RequestConfig> & { client?: typeof client } = {}) {
-  const { client: request = client, ...requestConfig } = config
-
-  const res = await request<GetAccountAccountGetQueryResponse, ResponseErrorConfig<Error>, unknown>({ method: 'GET', url: `/account/`, ...requestConfig })
-  return res.data
-}
 
 export function getAccountAccountGetQueryOptions(config: Partial<RequestConfig> & { client?: typeof client } = {}) {
   return {

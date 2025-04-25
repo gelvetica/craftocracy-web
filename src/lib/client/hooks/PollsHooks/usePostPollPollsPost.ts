@@ -2,29 +2,11 @@ import client from '@/lib/axiosInstance'
 import useSWRMutation from 'swr/mutation'
 import type { PostPollPollsPostMutationRequest, PostPollPollsPostMutationResponse, PostPollPollsPost422 } from '../../types/PostPollPollsPost.ts'
 import type { RequestConfig, ResponseErrorConfig } from '@/lib/axiosInstance'
+import { postPollPollsPost } from '../../postPollPollsPost.ts'
 
 export const postPollPollsPostMutationKey = () => [{ url: '/polls/' }] as const
 
 export type PostPollPollsPostMutationKey = ReturnType<typeof postPollPollsPostMutationKey>
-
-/**
- * @summary Post Poll
- * {@link /polls/}
- */
-export async function postPollPollsPost(
-  data: PostPollPollsPostMutationRequest,
-  config: Partial<RequestConfig<PostPollPollsPostMutationRequest>> & { client?: typeof client } = {},
-) {
-  const { client: request = client, ...requestConfig } = config
-
-  const res = await request<PostPollPollsPostMutationResponse, ResponseErrorConfig<PostPollPollsPost422>, PostPollPollsPostMutationRequest>({
-    method: 'POST',
-    url: `/polls/`,
-    data,
-    ...requestConfig,
-  })
-  return res.data
-}
 
 /**
  * @summary Post Poll

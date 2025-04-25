@@ -6,28 +6,11 @@ import type {
   PostElectionElectionsPost422,
 } from '../../types/PostElectionElectionsPost.ts'
 import type { RequestConfig, ResponseErrorConfig } from '@/lib/axiosInstance'
+import { postElectionElectionsPost } from '../../postElectionElectionsPost.ts'
 
 export const postElectionElectionsPostMutationKey = () => [{ url: '/elections/' }] as const
 
 export type PostElectionElectionsPostMutationKey = ReturnType<typeof postElectionElectionsPostMutationKey>
-
-/**
- * @summary Post Election
- * {@link /elections/}
- */
-export async function postElectionElectionsPost(
-  data: PostElectionElectionsPostMutationRequest,
-  config: Partial<RequestConfig<PostElectionElectionsPostMutationRequest>> & { client?: typeof client } = {},
-) {
-  const { client: request = client, ...requestConfig } = config
-
-  const res = await request<
-    PostElectionElectionsPostMutationResponse,
-    ResponseErrorConfig<PostElectionElectionsPost422>,
-    PostElectionElectionsPostMutationRequest
-  >({ method: 'POST', url: `/elections/`, data, ...requestConfig })
-  return res.data
-}
 
 /**
  * @summary Post Election

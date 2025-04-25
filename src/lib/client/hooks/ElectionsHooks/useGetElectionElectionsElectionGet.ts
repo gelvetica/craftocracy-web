@@ -6,29 +6,12 @@ import type {
   GetElectionElectionsElectionGet422,
 } from '../../types/GetElectionElectionsElectionGet.ts'
 import type { RequestConfig, ResponseErrorConfig } from '@/lib/axiosInstance'
+import { getElectionElectionsElectionGet } from '../../getElectionElectionsElectionGet.ts'
 
 export const getElectionElectionsElectionGetQueryKey = (election: GetElectionElectionsElectionGetPathParams['election']) =>
   [{ url: '/elections/:election', params: { election: election } }] as const
 
 export type GetElectionElectionsElectionGetQueryKey = ReturnType<typeof getElectionElectionsElectionGetQueryKey>
-
-/**
- * @summary Get Election
- * {@link /elections/:election}
- */
-export async function getElectionElectionsElectionGet(
-  election: GetElectionElectionsElectionGetPathParams['election'],
-  config: Partial<RequestConfig> & { client?: typeof client } = {},
-) {
-  const { client: request = client, ...requestConfig } = config
-
-  const res = await request<GetElectionElectionsElectionGetQueryResponse, ResponseErrorConfig<GetElectionElectionsElectionGet422>, unknown>({
-    method: 'GET',
-    url: `/elections/${election}`,
-    ...requestConfig,
-  })
-  return res.data
-}
 
 export function getElectionElectionsElectionGetQueryOptions(
   election: GetElectionElectionsElectionGetPathParams['election'],

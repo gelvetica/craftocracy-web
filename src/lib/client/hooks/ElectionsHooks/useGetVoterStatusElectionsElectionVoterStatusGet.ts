@@ -6,29 +6,12 @@ import type {
   GetVoterStatusElectionsElectionVoterStatusGet422,
 } from '../../types/GetVoterStatusElectionsElectionVoterStatusGet.ts'
 import type { RequestConfig, ResponseErrorConfig } from '@/lib/axiosInstance'
+import { getVoterStatusElectionsElectionVoterStatusGet } from '../../getVoterStatusElectionsElectionVoterStatusGet.ts'
 
 export const getVoterStatusElectionsElectionVoterStatusGetQueryKey = (election: GetVoterStatusElectionsElectionVoterStatusGetPathParams['election']) =>
   [{ url: '/elections/:election/voter_status', params: { election: election } }] as const
 
 export type GetVoterStatusElectionsElectionVoterStatusGetQueryKey = ReturnType<typeof getVoterStatusElectionsElectionVoterStatusGetQueryKey>
-
-/**
- * @summary Get Voter Status
- * {@link /elections/:election/voter_status}
- */
-export async function getVoterStatusElectionsElectionVoterStatusGet(
-  election: GetVoterStatusElectionsElectionVoterStatusGetPathParams['election'],
-  config: Partial<RequestConfig> & { client?: typeof client } = {},
-) {
-  const { client: request = client, ...requestConfig } = config
-
-  const res = await request<
-    GetVoterStatusElectionsElectionVoterStatusGetQueryResponse,
-    ResponseErrorConfig<GetVoterStatusElectionsElectionVoterStatusGet422>,
-    unknown
-  >({ method: 'GET', url: `/elections/${election}/voter_status`, ...requestConfig })
-  return res.data
-}
 
 export function getVoterStatusElectionsElectionVoterStatusGetQueryOptions(
   election: GetVoterStatusElectionsElectionVoterStatusGetPathParams['election'],

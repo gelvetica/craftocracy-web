@@ -2,29 +2,12 @@ import client from '@/lib/axiosInstance'
 import useSWR from 'swr'
 import type { GetUserUsersUserIdGetQueryResponse, GetUserUsersUserIdGetPathParams, GetUserUsersUserIdGet422 } from '../../types/GetUserUsersUserIdGet.ts'
 import type { RequestConfig, ResponseErrorConfig } from '@/lib/axiosInstance'
+import { getUserUsersUserIdGet } from '../../getUserUsersUserIdGet.ts'
 
 export const getUserUsersUserIdGetQueryKey = (user_id: GetUserUsersUserIdGetPathParams['user_id']) =>
   [{ url: '/users/:user_id', params: { user_id: user_id } }] as const
 
 export type GetUserUsersUserIdGetQueryKey = ReturnType<typeof getUserUsersUserIdGetQueryKey>
-
-/**
- * @summary Get User
- * {@link /users/:user_id}
- */
-export async function getUserUsersUserIdGet(
-  user_id: GetUserUsersUserIdGetPathParams['user_id'],
-  config: Partial<RequestConfig> & { client?: typeof client } = {},
-) {
-  const { client: request = client, ...requestConfig } = config
-
-  const res = await request<GetUserUsersUserIdGetQueryResponse, ResponseErrorConfig<GetUserUsersUserIdGet422>, unknown>({
-    method: 'GET',
-    url: `/users/${user_id}`,
-    ...requestConfig,
-  })
-  return res.data
-}
 
 export function getUserUsersUserIdGetQueryOptions(
   user_id: GetUserUsersUserIdGetPathParams['user_id'],

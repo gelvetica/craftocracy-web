@@ -6,28 +6,11 @@ import type {
   PostProposalProposalsPost422,
 } from '../../types/PostProposalProposalsPost.ts'
 import type { RequestConfig, ResponseErrorConfig } from '@/lib/axiosInstance'
+import { postProposalProposalsPost } from '../../postProposalProposalsPost.ts'
 
 export const postProposalProposalsPostMutationKey = () => [{ url: '/proposals/' }] as const
 
 export type PostProposalProposalsPostMutationKey = ReturnType<typeof postProposalProposalsPostMutationKey>
-
-/**
- * @summary Post Proposal
- * {@link /proposals/}
- */
-export async function postProposalProposalsPost(
-  data: PostProposalProposalsPostMutationRequest,
-  config: Partial<RequestConfig<PostProposalProposalsPostMutationRequest>> & { client?: typeof client } = {},
-) {
-  const { client: request = client, ...requestConfig } = config
-
-  const res = await request<
-    PostProposalProposalsPostMutationResponse,
-    ResponseErrorConfig<PostProposalProposalsPost422>,
-    PostProposalProposalsPostMutationRequest
-  >({ method: 'POST', url: `/proposals/`, data, ...requestConfig })
-  return res.data
-}
 
 /**
  * @summary Post Proposal

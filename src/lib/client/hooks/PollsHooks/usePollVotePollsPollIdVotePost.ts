@@ -7,29 +7,11 @@ import type {
   PollVotePollsPollIdVotePost422,
 } from '../../types/PollVotePollsPollIdVotePost.ts'
 import type { RequestConfig, ResponseErrorConfig } from '@/lib/axiosInstance'
+import { pollVotePollsPollIdVotePost } from '../../pollVotePollsPollIdVotePost.ts'
 
 export const pollVotePollsPollIdVotePostMutationKey = () => [{ url: '/polls/{poll_id}/vote' }] as const
 
 export type PollVotePollsPollIdVotePostMutationKey = ReturnType<typeof pollVotePollsPollIdVotePostMutationKey>
-
-/**
- * @summary Poll Vote
- * {@link /polls/:poll_id/vote}
- */
-export async function pollVotePollsPollIdVotePost(
-  poll_id: PollVotePollsPollIdVotePostPathParams['poll_id'],
-  data: PollVotePollsPollIdVotePostMutationRequest,
-  config: Partial<RequestConfig<PollVotePollsPollIdVotePostMutationRequest>> & { client?: typeof client } = {},
-) {
-  const { client: request = client, ...requestConfig } = config
-
-  const res = await request<
-    PollVotePollsPollIdVotePostMutationResponse,
-    ResponseErrorConfig<PollVotePollsPollIdVotePost422>,
-    PollVotePollsPollIdVotePostMutationRequest
-  >({ method: 'POST', url: `/polls/${poll_id}/vote`, data, ...requestConfig })
-  return res.data
-}
 
 /**
  * @summary Poll Vote

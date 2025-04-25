@@ -7,29 +7,11 @@ import type {
   PostElectionCandidateElectionsElectionCandidatePost422,
 } from '../../types/PostElectionCandidateElectionsElectionCandidatePost.ts'
 import type { RequestConfig, ResponseErrorConfig } from '@/lib/axiosInstance'
+import { postElectionCandidateElectionsElectionCandidatePost } from '../../postElectionCandidateElectionsElectionCandidatePost.ts'
 
 export const postElectionCandidateElectionsElectionCandidatePostMutationKey = () => [{ url: '/elections/{election}/candidate' }] as const
 
 export type PostElectionCandidateElectionsElectionCandidatePostMutationKey = ReturnType<typeof postElectionCandidateElectionsElectionCandidatePostMutationKey>
-
-/**
- * @summary Post Election Candidate
- * {@link /elections/:election/candidate}
- */
-export async function postElectionCandidateElectionsElectionCandidatePost(
-  election: PostElectionCandidateElectionsElectionCandidatePostPathParams['election'],
-  data: PostElectionCandidateElectionsElectionCandidatePostMutationRequest,
-  config: Partial<RequestConfig<PostElectionCandidateElectionsElectionCandidatePostMutationRequest>> & { client?: typeof client } = {},
-) {
-  const { client: request = client, ...requestConfig } = config
-
-  const res = await request<
-    PostElectionCandidateElectionsElectionCandidatePostMutationResponse,
-    ResponseErrorConfig<PostElectionCandidateElectionsElectionCandidatePost422>,
-    PostElectionCandidateElectionsElectionCandidatePostMutationRequest
-  >({ method: 'POST', url: `/elections/${election}/candidate`, data, ...requestConfig })
-  return res.data
-}
 
 /**
  * @summary Post Election Candidate

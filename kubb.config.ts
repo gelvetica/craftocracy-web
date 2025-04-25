@@ -14,15 +14,15 @@ export default defineConfig({
     plugins: [
         pluginOas(),
         pluginTs(),
-        //pluginClient({
-        //    output: {
-        //        path: '.',
-        //        barrelType: 'named',
-        //        banner: '/* eslint-disable no-alert, no-console */',
-        //        footer: '',
-        //    },
-        //    importPath: "../axiosInstance.ts",
-        //}),
+        pluginClient({
+            output: {
+                path: '.',
+                barrelType: 'named',
+                banner: '/* eslint-disable no-alert, no-console */',
+                footer: '',
+            },
+            importPath: "../axiosInstance.ts",
+        }),
         pluginSwr({
             output: {
                 path: './hooks',

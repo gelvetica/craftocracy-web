@@ -7,29 +7,11 @@ import type {
   ReviseProposalProposalsProposalRevisePost422,
 } from '../../types/ReviseProposalProposalsProposalRevisePost.ts'
 import type { RequestConfig, ResponseErrorConfig } from '@/lib/axiosInstance'
+import { reviseProposalProposalsProposalRevisePost } from '../../reviseProposalProposalsProposalRevisePost.ts'
 
 export const reviseProposalProposalsProposalRevisePostMutationKey = () => [{ url: '/proposals/{proposal}/revise' }] as const
 
 export type ReviseProposalProposalsProposalRevisePostMutationKey = ReturnType<typeof reviseProposalProposalsProposalRevisePostMutationKey>
-
-/**
- * @summary Revise Proposal
- * {@link /proposals/:proposal/revise}
- */
-export async function reviseProposalProposalsProposalRevisePost(
-  proposal: ReviseProposalProposalsProposalRevisePostPathParams['proposal'],
-  data: ReviseProposalProposalsProposalRevisePostMutationRequest,
-  config: Partial<RequestConfig<ReviseProposalProposalsProposalRevisePostMutationRequest>> & { client?: typeof client } = {},
-) {
-  const { client: request = client, ...requestConfig } = config
-
-  const res = await request<
-    ReviseProposalProposalsProposalRevisePostMutationResponse,
-    ResponseErrorConfig<ReviseProposalProposalsProposalRevisePost422>,
-    ReviseProposalProposalsProposalRevisePostMutationRequest
-  >({ method: 'POST', url: `/proposals/${proposal}/revise`, data, ...requestConfig })
-  return res.data
-}
 
 /**
  * @summary Revise Proposal

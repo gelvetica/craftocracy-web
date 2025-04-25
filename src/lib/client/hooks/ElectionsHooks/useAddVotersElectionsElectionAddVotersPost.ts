@@ -6,28 +6,11 @@ import type {
   AddVotersElectionsElectionAddVotersPost422,
 } from '../../types/AddVotersElectionsElectionAddVotersPost.ts'
 import type { RequestConfig, ResponseErrorConfig } from '@/lib/axiosInstance'
+import { addVotersElectionsElectionAddVotersPost } from '../../addVotersElectionsElectionAddVotersPost.ts'
 
 export const addVotersElectionsElectionAddVotersPostMutationKey = () => [{ url: '/elections/{election}/add_voters' }] as const
 
 export type AddVotersElectionsElectionAddVotersPostMutationKey = ReturnType<typeof addVotersElectionsElectionAddVotersPostMutationKey>
-
-/**
- * @summary Add Voters
- * {@link /elections/:election/add_voters}
- */
-export async function addVotersElectionsElectionAddVotersPost(
-  election: AddVotersElectionsElectionAddVotersPostPathParams['election'],
-  config: Partial<RequestConfig> & { client?: typeof client } = {},
-) {
-  const { client: request = client, ...requestConfig } = config
-
-  const res = await request<AddVotersElectionsElectionAddVotersPostMutationResponse, ResponseErrorConfig<AddVotersElectionsElectionAddVotersPost422>, unknown>({
-    method: 'POST',
-    url: `/elections/${election}/add_voters`,
-    ...requestConfig,
-  })
-  return res.data
-}
 
 /**
  * @summary Add Voters

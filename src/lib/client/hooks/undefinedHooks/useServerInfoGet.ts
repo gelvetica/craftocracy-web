@@ -2,21 +2,11 @@ import client from '@/lib/axiosInstance'
 import useSWR from 'swr'
 import type { ServerInfoGetQueryResponse } from '../../types/ServerInfoGet.ts'
 import type { RequestConfig, ResponseErrorConfig } from '@/lib/axiosInstance'
+import { serverInfoGet } from '../../serverInfoGet.ts'
 
 export const serverInfoGetQueryKey = () => [{ url: '/' }] as const
 
 export type ServerInfoGetQueryKey = ReturnType<typeof serverInfoGetQueryKey>
-
-/**
- * @summary Server Info
- * {@link /}
- */
-export async function serverInfoGet(config: Partial<RequestConfig> & { client?: typeof client } = {}) {
-  const { client: request = client, ...requestConfig } = config
-
-  const res = await request<ServerInfoGetQueryResponse, ResponseErrorConfig<Error>, unknown>({ method: 'GET', url: `/`, ...requestConfig })
-  return res.data
-}
 
 export function serverInfoGetQueryOptions(config: Partial<RequestConfig> & { client?: typeof client } = {}) {
   return {

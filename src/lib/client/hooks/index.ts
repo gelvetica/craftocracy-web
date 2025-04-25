@@ -20,95 +20,57 @@ export type { ListPartiesPartiesGetQueryKey } from './undefinedHooks/useListPart
 export type { ServerInfoGetQueryKey } from './undefinedHooks/useServerInfoGet.ts'
 export type { GetUserUsersUserIdGetQueryKey } from './UsersHooks/useGetUserUsersUserIdGet.ts'
 export type { ListUsersUsersGetQueryKey } from './UsersHooks/useListUsersUsersGet.ts'
-export {
-  getAccountAccountGetQueryKey,
-  getAccountAccountGet,
-  getAccountAccountGetQueryOptions,
-  useGetAccountAccountGet,
-} from './AccountHooks/useGetAccountAccountGet.ts'
-export { registerUserAccountPostMutationKey, registerUserAccountPost, useRegisterUserAccountPost } from './AccountHooks/useRegisterUserAccountPost.ts'
+export { getAccountAccountGetQueryKey, getAccountAccountGetQueryOptions, useGetAccountAccountGet } from './AccountHooks/useGetAccountAccountGet.ts'
+export { registerUserAccountPostMutationKey, useRegisterUserAccountPost } from './AccountHooks/useRegisterUserAccountPost.ts'
 export {
   addVotersElectionsElectionAddVotersPostMutationKey,
-  addVotersElectionsElectionAddVotersPost,
   useAddVotersElectionsElectionAddVotersPost,
 } from './ElectionsHooks/useAddVotersElectionsElectionAddVotersPost.ts'
 export {
   getElectionElectionsElectionGetQueryKey,
-  getElectionElectionsElectionGet,
   getElectionElectionsElectionGetQueryOptions,
   useGetElectionElectionsElectionGet,
 } from './ElectionsHooks/useGetElectionElectionsElectionGet.ts'
 export {
   getVoterStatusElectionsElectionVoterStatusGetQueryKey,
-  getVoterStatusElectionsElectionVoterStatusGet,
   getVoterStatusElectionsElectionVoterStatusGetQueryOptions,
   useGetVoterStatusElectionsElectionVoterStatusGet,
 } from './ElectionsHooks/useGetVoterStatusElectionsElectionVoterStatusGet.ts'
 export {
   postElectionCandidateElectionsElectionCandidatePostMutationKey,
-  postElectionCandidateElectionsElectionCandidatePost,
   usePostElectionCandidateElectionsElectionCandidatePost,
 } from './ElectionsHooks/usePostElectionCandidateElectionsElectionCandidatePost.ts'
-export { postElectionElectionsPostMutationKey, postElectionElectionsPost, usePostElectionElectionsPost } from './ElectionsHooks/usePostElectionElectionsPost.ts'
+export { postElectionElectionsPostMutationKey, usePostElectionElectionsPost } from './ElectionsHooks/usePostElectionElectionsPost.ts'
 export {
   postElectionVoteElectionsElectionVotePostMutationKey,
-  postElectionVoteElectionsElectionVotePost,
   usePostElectionVoteElectionsElectionVotePost,
 } from './ElectionsHooks/usePostElectionVoteElectionsElectionVotePost.ts'
-export {
-  getPollPollsPollIdGetQueryKey,
-  getPollPollsPollIdGet,
-  getPollPollsPollIdGetQueryOptions,
-  useGetPollPollsPollIdGet,
-} from './PollsHooks/useGetPollPollsPollIdGet.ts'
-export { getPollsPollsGetQueryKey, getPollsPollsGet, getPollsPollsGetQueryOptions, useGetPollsPollsGet } from './PollsHooks/useGetPollsPollsGet.ts'
-export {
-  pollVotePollsPollIdVotePostMutationKey,
-  pollVotePollsPollIdVotePost,
-  usePollVotePollsPollIdVotePost,
-} from './PollsHooks/usePollVotePollsPollIdVotePost.ts'
-export { postPollPollsPostMutationKey, postPollPollsPost, usePostPollPollsPost } from './PollsHooks/usePostPollPollsPost.ts'
+export { getPollPollsPollIdGetQueryKey, getPollPollsPollIdGetQueryOptions, useGetPollPollsPollIdGet } from './PollsHooks/useGetPollPollsPollIdGet.ts'
+export { getPollsPollsGetQueryKey, getPollsPollsGetQueryOptions, useGetPollsPollsGet } from './PollsHooks/useGetPollsPollsGet.ts'
+export { pollVotePollsPollIdVotePostMutationKey, usePollVotePollsPollIdVotePost } from './PollsHooks/usePollVotePollsPollIdVotePost.ts'
+export { postPollPollsPostMutationKey, usePostPollPollsPost } from './PollsHooks/usePostPollPollsPost.ts'
 export {
   getProposalProposalsProposalGetQueryKey,
-  getProposalProposalsProposalGet,
   getProposalProposalsProposalGetQueryOptions,
   useGetProposalProposalsProposalGet,
 } from './ProposalsHooks/useGetProposalProposalsProposalGet.ts'
 export {
   getProposalsProposalsGetQueryKey,
-  getProposalsProposalsGet,
   getProposalsProposalsGetQueryOptions,
   useGetProposalsProposalsGet,
 } from './ProposalsHooks/useGetProposalsProposalsGet.ts'
-export { postProposalProposalsPostMutationKey, postProposalProposalsPost, usePostProposalProposalsPost } from './ProposalsHooks/usePostProposalProposalsPost.ts'
+export { postProposalProposalsPostMutationKey, usePostProposalProposalsPost } from './ProposalsHooks/usePostProposalProposalsPost.ts'
 export {
   reviseProposalProposalsProposalRevisePostMutationKey,
-  reviseProposalProposalsProposalRevisePost,
   useReviseProposalProposalsProposalRevisePost,
 } from './ProposalsHooks/useReviseProposalProposalsProposalRevisePost.ts'
-export {
-  callbackCallbackGetQueryKey,
-  callbackCallbackGet,
-  callbackCallbackGetQueryOptions,
-  useCallbackCallbackGet,
-} from './undefinedHooks/useCallbackCallbackGet.ts'
+export { callbackCallbackGetQueryKey, callbackCallbackGetQueryOptions, useCallbackCallbackGet } from './undefinedHooks/useCallbackCallbackGet.ts'
 export {
   getPartyPartiesPartyIdGetQueryKey,
-  getPartyPartiesPartyIdGet,
   getPartyPartiesPartyIdGetQueryOptions,
   useGetPartyPartiesPartyIdGet,
 } from './undefinedHooks/useGetPartyPartiesPartyIdGet.ts'
-export {
-  listPartiesPartiesGetQueryKey,
-  listPartiesPartiesGet,
-  listPartiesPartiesGetQueryOptions,
-  useListPartiesPartiesGet,
-} from './undefinedHooks/useListPartiesPartiesGet.ts'
-export { serverInfoGetQueryKey, serverInfoGet, serverInfoGetQueryOptions, useServerInfoGet } from './undefinedHooks/useServerInfoGet.ts'
-export {
-  getUserUsersUserIdGetQueryKey,
-  getUserUsersUserIdGet,
-  getUserUsersUserIdGetQueryOptions,
-  useGetUserUsersUserIdGet,
-} from './UsersHooks/useGetUserUsersUserIdGet.ts'
-export { listUsersUsersGetQueryKey, listUsersUsersGet, listUsersUsersGetQueryOptions, useListUsersUsersGet } from './UsersHooks/useListUsersUsersGet.ts'
+export { listPartiesPartiesGetQueryKey, listPartiesPartiesGetQueryOptions, useListPartiesPartiesGet } from './undefinedHooks/useListPartiesPartiesGet.ts'
+export { serverInfoGetQueryKey, serverInfoGetQueryOptions, useServerInfoGet } from './undefinedHooks/useServerInfoGet.ts'
+export { getUserUsersUserIdGetQueryKey, getUserUsersUserIdGetQueryOptions, useGetUserUsersUserIdGet } from './UsersHooks/useGetUserUsersUserIdGet.ts'
+export { listUsersUsersGetQueryKey, listUsersUsersGetQueryOptions, useListUsersUsersGet } from './UsersHooks/useListUsersUsersGet.ts'

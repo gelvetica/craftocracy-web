@@ -6,29 +6,11 @@ import type {
   RegisterUserAccountPost422,
 } from '../../types/RegisterUserAccountPost.ts'
 import type { RequestConfig, ResponseErrorConfig } from '@/lib/axiosInstance'
+import { registerUserAccountPost } from '../../registerUserAccountPost.ts'
 
 export const registerUserAccountPostMutationKey = () => [{ url: '/account/' }] as const
 
 export type RegisterUserAccountPostMutationKey = ReturnType<typeof registerUserAccountPostMutationKey>
-
-/**
- * @summary Register User
- * {@link /account/}
- */
-export async function registerUserAccountPost(
-  data: RegisterUserAccountPostMutationRequest,
-  config: Partial<RequestConfig<RegisterUserAccountPostMutationRequest>> & { client?: typeof client } = {},
-) {
-  const { client: request = client, ...requestConfig } = config
-
-  const res = await request<RegisterUserAccountPostMutationResponse, ResponseErrorConfig<RegisterUserAccountPost422>, RegisterUserAccountPostMutationRequest>({
-    method: 'POST',
-    url: `/account/`,
-    data,
-    ...requestConfig,
-  })
-  return res.data
-}
 
 /**
  * @summary Register User

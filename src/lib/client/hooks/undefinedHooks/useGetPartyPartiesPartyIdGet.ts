@@ -6,29 +6,12 @@ import type {
   GetPartyPartiesPartyIdGet422,
 } from '../../types/GetPartyPartiesPartyIdGet.ts'
 import type { RequestConfig, ResponseErrorConfig } from '@/lib/axiosInstance'
+import { getPartyPartiesPartyIdGet } from '../../getPartyPartiesPartyIdGet.ts'
 
 export const getPartyPartiesPartyIdGetQueryKey = (party_id: GetPartyPartiesPartyIdGetPathParams['party_id']) =>
   [{ url: '/parties/:party_id', params: { party_id: party_id } }] as const
 
 export type GetPartyPartiesPartyIdGetQueryKey = ReturnType<typeof getPartyPartiesPartyIdGetQueryKey>
-
-/**
- * @summary Get Party
- * {@link /parties/:party_id}
- */
-export async function getPartyPartiesPartyIdGet(
-  party_id: GetPartyPartiesPartyIdGetPathParams['party_id'],
-  config: Partial<RequestConfig> & { client?: typeof client } = {},
-) {
-  const { client: request = client, ...requestConfig } = config
-
-  const res = await request<GetPartyPartiesPartyIdGetQueryResponse, ResponseErrorConfig<GetPartyPartiesPartyIdGet422>, unknown>({
-    method: 'GET',
-    url: `/parties/${party_id}`,
-    ...requestConfig,
-  })
-  return res.data
-}
 
 export function getPartyPartiesPartyIdGetQueryOptions(
   party_id: GetPartyPartiesPartyIdGetPathParams['party_id'],

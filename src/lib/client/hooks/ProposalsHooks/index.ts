@@ -4,19 +4,12 @@ export type { PostProposalProposalsPostMutationKey } from './usePostProposalProp
 export type { ReviseProposalProposalsProposalRevisePostMutationKey } from './useReviseProposalProposalsProposalRevisePost.ts'
 export {
   getProposalProposalsProposalGetQueryKey,
-  getProposalProposalsProposalGet,
   getProposalProposalsProposalGetQueryOptions,
   useGetProposalProposalsProposalGet,
 } from './useGetProposalProposalsProposalGet.ts'
-export {
-  getProposalsProposalsGetQueryKey,
-  getProposalsProposalsGet,
-  getProposalsProposalsGetQueryOptions,
-  useGetProposalsProposalsGet,
-} from './useGetProposalsProposalsGet.ts'
-export { postProposalProposalsPostMutationKey, postProposalProposalsPost, usePostProposalProposalsPost } from './usePostProposalProposalsPost.ts'
+export { getProposalsProposalsGetQueryKey, getProposalsProposalsGetQueryOptions, useGetProposalsProposalsGet } from './useGetProposalsProposalsGet.ts'
+export { postProposalProposalsPostMutationKey, usePostProposalProposalsPost } from './usePostProposalProposalsPost.ts'
 export {
   reviseProposalProposalsProposalRevisePostMutationKey,
-  reviseProposalProposalsProposalRevisePost,
   useReviseProposalProposalsProposalRevisePost,
 } from './useReviseProposalProposalsProposalRevisePost.ts'

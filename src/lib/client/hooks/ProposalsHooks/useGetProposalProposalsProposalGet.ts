@@ -6,29 +6,12 @@ import type {
   GetProposalProposalsProposalGet422,
 } from '../../types/GetProposalProposalsProposalGet.ts'
 import type { RequestConfig, ResponseErrorConfig } from '@/lib/axiosInstance'
+import { getProposalProposalsProposalGet } from '../../getProposalProposalsProposalGet.ts'
 
 export const getProposalProposalsProposalGetQueryKey = (proposal: GetProposalProposalsProposalGetPathParams['proposal']) =>
   [{ url: '/proposals/:proposal', params: { proposal: proposal } }] as const
 
 export type GetProposalProposalsProposalGetQueryKey = ReturnType<typeof getProposalProposalsProposalGetQueryKey>
-
-/**
- * @summary Get Proposal
- * {@link /proposals/:proposal}
- */
-export async function getProposalProposalsProposalGet(
-  proposal: GetProposalProposalsProposalGetPathParams['proposal'],
-  config: Partial<RequestConfig> & { client?: typeof client } = {},
-) {
-  const { client: request = client, ...requestConfig } = config
-
-  const res = await request<GetProposalProposalsProposalGetQueryResponse, ResponseErrorConfig<GetProposalProposalsProposalGet422>, unknown>({
-    method: 'GET',
-    url: `/proposals/${proposal}`,
-    ...requestConfig,
-  })
-  return res.data
-}
 
 export function getProposalProposalsProposalGetQueryOptions(
   proposal: GetProposalProposalsProposalGetPathParams['proposal'],
