@@ -2,7 +2,7 @@ import useSWR from "swr";
 import {getAccountAccountGet} from "@/lib/client";
 import {isAxiosError} from "axios";
 
-export const useAccountStatus: [data: object | undefined, isLoading: boolean] = () => {
+export function useAccountStatus(): [data: object | undefined, isLoading: boolean] {
     const {data, isLoading, error} = useSWR("/account", getAccountAccountGet);
     if (isLoading) return {data: undefined, isLoading: true};
     if (error) {
