@@ -2,7 +2,7 @@
 
 import { useParams } from 'next/navigation'
 import useSWR from "swr";
-import {getAccountAccountGet, getProposalProposalsProposalGet} from "@/lib/client";
+import {getAccountAccountGet, useGetProposalProposalsProposalGet, useGetProposalsProposalsGet} from "@/lib/client";
 import React from 'react';
 import Link from "next/link";
 
@@ -19,13 +19,13 @@ function TextWithLineBreaks(t) {
 
 export default function ProposalPage() {
     const params = useParams<{ proposal: string }>()
-    const {data: proposal, isLoading} = useSWR(params.proposal, getProposalProposalsProposalGet)
+    const {data: proposal, isLoading} = useGetProposalProposalsProposalGet(Number(params.proposal));
     const {data: account} = useSWR("/account", getAccountAccountGet)
     if (isLoading) return <div>please wait...</div>
-    if (proposal && account) return (
+    if (proposal) return (
         <div>
             {
-                (proposal.revisions_allowed && account.id === proposal.author.id) &&
+                (account && proposal.revisions_allowed && account.id === proposal.author.id) &&
                 <div className="float-right bg-surface0 p-1 px-2 rounded-full text-xl">
                     <Link href={`/proposals/${proposal.id}/revise`}>Revise</Link>
                 </div>
