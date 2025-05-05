@@ -5,6 +5,8 @@ import React from "react";
 import {useGetPollsPollsGet} from "@/lib/client/hooks";
 import {PollReferenceModel} from "@/lib/client";
 import ResultsDisplay from "@/app/polls/resultsdisplay";
+import {useSearchParams} from "next/navigation";
+import { Suspense } from 'react'
 
 function PollCard(poll: PollReferenceModel) {
     return (
@@ -19,7 +21,7 @@ function PollCard(poll: PollReferenceModel) {
 
 function PollsList() {
     //"/polls", getPollsPollsGet,
-    const {data, isLoading} = useGetPollsPollsGet(undefined,{query: {refreshInterval: 10000}});
+    const {data, isLoading} = useGetPollsPollsGet(Object.fromEntries(useSearchParams()),{query: {refreshInterval: 10000}});
     if (isLoading) return
     if (data) return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
@@ -38,7 +40,9 @@ export default function PollPage() {
     return (
         <div>
             <p className="text-2xl mb-2">Polls</p>
-            <PollsList />
+            <Suspense fallback={(<div>loading...</div>)}>
+                <PollsList />
+            </Suspense>
         </div>
     )
 }
