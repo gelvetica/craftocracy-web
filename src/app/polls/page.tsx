@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
-import {useGetPollsPollsGet} from "@/lib/client/hooks";
+import {useGetPollsLegacyPollsGet} from "@/lib/client/hooks";
 import {PollReferenceModel} from "@/lib/client";
 import ResultsDisplay from "@/app/polls/resultsdisplay";
 import {useSearchParams} from "next/navigation";
@@ -21,7 +21,7 @@ function PollCard(poll: PollReferenceModel) {
 
 function PollsList() {
     //"/polls", getPollsPollsGet,
-    const {data, isLoading} = useGetPollsPollsGet({...{poll_open: true}, ...Object.fromEntries(useSearchParams())}, {query: {refreshInterval: 10000}});
+    const {data, isLoading} = useGetPollsLegacyPollsGet({...{poll_open: true}, ...Object.fromEntries(useSearchParams())}, {query: {refreshInterval: 10000}});
     if (isLoading) return
     if (data) return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">

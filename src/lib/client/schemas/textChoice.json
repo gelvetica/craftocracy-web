@@ -1,0 +1,1 @@
+{"properties":{"_id":{"type":"string","title":"Id"},"text":{"type":"string","title":"Text"}},"type":"object","required":["text"],"title":"TextChoice","x-readme-ref-name":"TextChoice"}

@@ -6,10 +6,13 @@ export type { GetVoterStatusElectionsElectionVoterStatusGetQueryKey } from './El
 export type { PostElectionCandidateElectionsElectionCandidatePostMutationKey } from './ElectionsHooks/usePostElectionCandidateElectionsElectionCandidatePost.ts'
 export type { PostElectionElectionsPostMutationKey } from './ElectionsHooks/usePostElectionElectionsPost.ts'
 export type { PostElectionVoteElectionsElectionVotePostMutationKey } from './ElectionsHooks/usePostElectionVoteElectionsElectionVotePost.ts'
-export type { GetPollPollsPollIdGetQueryKey } from './PollsHooks/useGetPollPollsPollIdGet.ts'
-export type { GetPollsPollsGetQueryKey } from './PollsHooks/useGetPollsPollsGet.ts'
-export type { PollVotePollsPollIdVotePostMutationKey } from './PollsHooks/usePollVotePollsPollIdVotePost.ts'
+export type { GetPollLegacyPollsPollIdGetQueryKey } from './Polls (legacy)Hooks/useGetPollLegacyPollsPollIdGet.ts'
+export type { GetPollsLegacyPollsGetQueryKey } from './Polls (legacy)Hooks/useGetPollsLegacyPollsGet.ts'
+export type { PollVoteLegacyPollsPollIdVotePostMutationKey } from './Polls (legacy)Hooks/usePollVoteLegacyPollsPollIdVotePost.ts'
+export type { PostPollLegacyPollsPostMutationKey } from './Polls (legacy)Hooks/usePostPollLegacyPollsPost.ts'
 export type { PostPollPollsPostMutationKey } from './PollsHooks/usePostPollPollsPost.ts'
+export type { PostPollVotePollsPollIdVotePostMutationKey } from './PollsHooks/usePostPollVotePollsPollIdVotePost.ts'
+export type { TempVoterStatusPollsPollIdVoterStatusGetQueryKey } from './PollsHooks/useTempVoterStatusPollsPollIdVoterStatusGet.ts'
 export type { GetProposalProposalsProposalGetQueryKey } from './ProposalsHooks/useGetProposalProposalsProposalGet.ts'
 export type { GetProposalsProposalsGetQueryKey } from './ProposalsHooks/useGetProposalsProposalsGet.ts'
 export type { PostProposalProposalsPostMutationKey } from './ProposalsHooks/usePostProposalProposalsPost.ts'
@@ -45,10 +48,28 @@ export {
   postElectionVoteElectionsElectionVotePostMutationKey,
   usePostElectionVoteElectionsElectionVotePost,
 } from './ElectionsHooks/usePostElectionVoteElectionsElectionVotePost.ts'
-export { getPollPollsPollIdGetQueryKey, getPollPollsPollIdGetQueryOptions, useGetPollPollsPollIdGet } from './PollsHooks/useGetPollPollsPollIdGet.ts'
-export { getPollsPollsGetQueryKey, getPollsPollsGetQueryOptions, useGetPollsPollsGet } from './PollsHooks/useGetPollsPollsGet.ts'
-export { pollVotePollsPollIdVotePostMutationKey, usePollVotePollsPollIdVotePost } from './PollsHooks/usePollVotePollsPollIdVotePost.ts'
+export {
+  getPollLegacyPollsPollIdGetQueryKey,
+  getPollLegacyPollsPollIdGetQueryOptions,
+  useGetPollLegacyPollsPollIdGet,
+} from './Polls (legacy)Hooks/useGetPollLegacyPollsPollIdGet.ts'
+export {
+  getPollsLegacyPollsGetQueryKey,
+  getPollsLegacyPollsGetQueryOptions,
+  useGetPollsLegacyPollsGet,
+} from './Polls (legacy)Hooks/useGetPollsLegacyPollsGet.ts'
+export {
+  pollVoteLegacyPollsPollIdVotePostMutationKey,
+  usePollVoteLegacyPollsPollIdVotePost,
+} from './Polls (legacy)Hooks/usePollVoteLegacyPollsPollIdVotePost.ts'
+export { postPollLegacyPollsPostMutationKey, usePostPollLegacyPollsPost } from './Polls (legacy)Hooks/usePostPollLegacyPollsPost.ts'
 export { postPollPollsPostMutationKey, usePostPollPollsPost } from './PollsHooks/usePostPollPollsPost.ts'
+export { postPollVotePollsPollIdVotePostMutationKey, usePostPollVotePollsPollIdVotePost } from './PollsHooks/usePostPollVotePollsPollIdVotePost.ts'
+export {
+  tempVoterStatusPollsPollIdVoterStatusGetQueryKey,
+  tempVoterStatusPollsPollIdVoterStatusGetQueryOptions,
+  useTempVoterStatusPollsPollIdVoterStatusGet,
+} from './PollsHooks/useTempVoterStatusPollsPollIdVoterStatusGet.ts'
 export {
   getProposalProposalsProposalGetQueryKey,
   getProposalProposalsProposalGetQueryOptions,

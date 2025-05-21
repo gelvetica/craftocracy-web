@@ -1,0 +1,1 @@
+{"properties":{"_id":{"type":"string","title":"Id"},"ballot_type":{"type":"string","const":"approval","title":"Ballot Type"},"approve":{"anyOf":[{"type":"boolean"},{"type":"null"}],"title":"Approve"}},"type":"object","required":["ballot_type","approve"],"title":"ApprovalBallot","x-readme-ref-name":"ApprovalBallot"}

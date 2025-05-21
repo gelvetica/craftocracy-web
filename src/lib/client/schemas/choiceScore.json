@@ -1,0 +1,1 @@
+{"properties":{"choice":{"type":"string","title":"Choice"},"score":{"type":"integer","maximum":5,"minimum":0,"title":"Score"}},"type":"object","required":["choice","score"],"title":"ChoiceScore","x-readme-ref-name":"ChoiceScore"}

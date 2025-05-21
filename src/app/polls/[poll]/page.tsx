@@ -3,9 +3,9 @@
 import {useParams} from "next/navigation";
 import useSWR, { mutate } from "swr";
 import {
-    pollVotePollsPollIdVotePost,
-    getPollPollsPollIdGet,
-    PollModel,
+    pollVoteLegacyPollsPollIdVotePost,
+    getPollLegacyPollsPollIdGet,
+    ModelsPollModel,
     UserModel
 } from "@/lib/client";
 import {FormEvent} from "react";
@@ -25,14 +25,14 @@ function UserWithParty(user: UserModel) {
     }
 }
 
-function CastVoteForm(poll: PollModel) {
+function CastVoteForm(poll: ModelsPollModel) {
     async function cast_vote(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
 
         const formData = new FormData(event.currentTarget)
         const ballot_data = Object.fromEntries(formData.entries())
         console.log(ballot_data)
-        await pollVotePollsPollIdVotePost(poll.id, ballot_data)
+        await pollVoteLegacyPollsPollIdVotePost(poll.id, ballot_data)
         await mutate(poll.id)
     }
     return (
@@ -52,7 +52,7 @@ function CastVoteForm(poll: PollModel) {
     )
 }
 
-function VotersChoicesDisplay(poll: PollModel) {
+function VotersChoicesDisplay(poll: ModelsPollModel) {
     let not_voted_count = poll.total_voters
     poll.choices.forEach(choice => {
         not_voted_count -= choice.votes;
@@ -89,7 +89,7 @@ function VotersChoicesDisplay(poll: PollModel) {
 
 export default function PollPage() {
     const params = useParams<{ poll: string }>()
-    const {data: poll} = useSWR(params.poll, getPollPollsPollIdGet, {refreshInterval: 10000})
+    const {data: poll} = useSWR(params.poll, getPollLegacyPollsPollIdGet, {refreshInterval: 10000})
     if (poll) return (
         <div>
             <div className="text-2xl">{poll.title}</div>
