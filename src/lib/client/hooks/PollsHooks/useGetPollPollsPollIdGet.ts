@@ -21,7 +21,7 @@ export function getPollPollsPollIdGetQueryOptions(
 }
 
 /**
- * @summary Get Poll
+ * @summary Get  Poll
  * {@link /polls/:poll_id}
  */
 export function useGetPollPollsPollIdGet(

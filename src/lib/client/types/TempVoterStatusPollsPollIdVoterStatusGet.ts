@@ -1,4 +1,5 @@
 import type { HTTPValidationError } from './HTTPValidationError.ts'
+import type { TempVoterStatus } from './TempVoterStatus.ts'
 
 export type TempVoterStatusPollsPollIdVoterStatusGetPathParams = {
   /**
@@ -10,7 +11,7 @@ export type TempVoterStatusPollsPollIdVoterStatusGetPathParams = {
 /**
  * @description Successful Response
  */
-export type TempVoterStatusPollsPollIdVoterStatusGet200 = any
+export type TempVoterStatusPollsPollIdVoterStatusGet200 = TempVoterStatus
 
 /**
  * @description Validation Error

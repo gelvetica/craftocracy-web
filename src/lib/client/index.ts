@@ -10,6 +10,7 @@ export type { GetPollLegacyPollsPollIdGetQueryKey } from './hooks/Polls (legacy)
 export type { GetPollsLegacyPollsGetQueryKey } from './hooks/Polls (legacy)Hooks/useGetPollsLegacyPollsGet.ts'
 export type { PollVoteLegacyPollsPollIdVotePostMutationKey } from './hooks/Polls (legacy)Hooks/usePollVoteLegacyPollsPollIdVotePost.ts'
 export type { PostPollLegacyPollsPostMutationKey } from './hooks/Polls (legacy)Hooks/usePostPollLegacyPollsPost.ts'
+export type { GetPollPollsPollIdGetQueryKey } from './hooks/PollsHooks/useGetPollPollsPollIdGet.ts'
 export type { PostPollPollsPostMutationKey } from './hooks/PollsHooks/usePostPollPollsPost.ts'
 export type { PostPollVotePollsPollIdVotePostMutationKey } from './hooks/PollsHooks/usePostPollVotePollsPollIdVotePost.ts'
 export type { TempVoterStatusPollsPollIdVoterStatusGetQueryKey } from './hooks/PollsHooks/useTempVoterStatusPollsPollIdVoterStatusGet.ts'
@@ -70,6 +71,13 @@ export type {
   GetPollLegacyPollsPollIdGetQueryResponse,
   GetPollLegacyPollsPollIdGetQuery,
 } from './types/GetPollLegacyPollsPollIdGet.ts'
+export type {
+  GetPollPollsPollIdGetPathParams,
+  GetPollPollsPollIdGet200,
+  GetPollPollsPollIdGet422,
+  GetPollPollsPollIdGetQueryResponse,
+  GetPollPollsPollIdGetQuery,
+} from './types/GetPollPollsPollIdGet.ts'
 export type {
   GetPollsLegacyPollsGetQueryParams,
   GetPollsLegacyPollsGet200,
@@ -217,6 +225,7 @@ export type { ScheduleModel } from './types/ScheduleModel.ts'
 export type { ServerInfoGet200, ServerInfoGetQueryResponse, ServerInfoGetQuery } from './types/ServerInfoGet.ts'
 export type { ServerInfoModel } from './types/ServerInfoModel.ts'
 export type { StarBallot } from './types/StarBallot.ts'
+export type { TempVoterStatus } from './types/TempVoterStatus.ts'
 export type {
   TempVoterStatusPollsPollIdVoterStatusGetPathParams,
   TempVoterStatusPollsPollIdVoterStatusGet200,
@@ -237,6 +246,7 @@ export { getGetAccountAccountGetUrl, getAccountAccountGet } from './getAccountAc
 export { getGetElectionElectionsElectionGetUrl, getElectionElectionsElectionGet } from './getElectionElectionsElectionGet.ts'
 export { getGetPartyPartiesPartyIdGetUrl, getPartyPartiesPartyIdGet } from './getPartyPartiesPartyIdGet.ts'
 export { getGetPollLegacyPollsPollIdGetUrl, getPollLegacyPollsPollIdGet } from './getPollLegacyPollsPollIdGet.ts'
+export { getGetPollPollsPollIdGetUrl, getPollPollsPollIdGet } from './getPollPollsPollIdGet.ts'
 export { getGetPollsLegacyPollsGetUrl, getPollsLegacyPollsGet } from './getPollsLegacyPollsGet.ts'
 export { getGetProposalProposalsProposalGetUrl, getProposalProposalsProposalGet } from './getProposalProposalsProposalGet.ts'
 export { getGetProposalsProposalsGetUrl, getProposalsProposalsGet } from './getProposalsProposalsGet.ts'
@@ -285,6 +295,7 @@ export {
   usePollVoteLegacyPollsPollIdVotePost,
 } from './hooks/Polls (legacy)Hooks/usePollVoteLegacyPollsPollIdVotePost.ts'
 export { postPollLegacyPollsPostMutationKey, usePostPollLegacyPollsPost } from './hooks/Polls (legacy)Hooks/usePostPollLegacyPollsPost.ts'
+export { getPollPollsPollIdGetQueryKey, getPollPollsPollIdGetQueryOptions, useGetPollPollsPollIdGet } from './hooks/PollsHooks/useGetPollPollsPollIdGet.ts'
 export { postPollPollsPostMutationKey, usePostPollPollsPost } from './hooks/PollsHooks/usePostPollPollsPost.ts'
 export { postPollVotePollsPollIdVotePostMutationKey, usePostPollVotePollsPollIdVotePost } from './hooks/PollsHooks/usePostPollVotePollsPollIdVotePost.ts'
 export {

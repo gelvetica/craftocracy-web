@@ -1,5 +1,5 @@
 import type { HTTPValidationError } from './HTTPValidationError.ts'
-import type { PollModel } from './PollModel.ts'
+import type { ModelsPollsPollModelOutput } from './ModelsPollsPollModelOutput.ts'
 
 export type GetPollPollsPollIdGetPathParams = {
   /**
@@ -11,7 +11,7 @@ export type GetPollPollsPollIdGetPathParams = {
 /**
  * @description Successful Response
  */
-export type GetPollPollsPollIdGet200 = PollModel
+export type GetPollPollsPollIdGet200 = ModelsPollsPollModelOutput
 
 /**
  * @description Validation Error

@@ -1,0 +1,1 @@
+{"properties":{"can_vote":{"type":"boolean","title":"Can Vote"},"reason":{"type":"string","title":"Reason"}},"type":"object","required":["can_vote","reason"],"title":"TempVoterStatus","x-readme-ref-name":"TempVoterStatus"}

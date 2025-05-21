@@ -8,7 +8,7 @@ export function getGetPollPollsPollIdGetUrl(poll_id: GetPollPollsPollIdGetPathPa
 }
 
 /**
- * @summary Get Poll
+ * @summary Get  Poll
  * {@link /polls/:poll_id}
  */
 export async function getPollPollsPollIdGet(

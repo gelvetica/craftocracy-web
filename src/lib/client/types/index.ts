@@ -46,6 +46,13 @@ export type {
   GetPollLegacyPollsPollIdGetQuery,
 } from './GetPollLegacyPollsPollIdGet.ts'
 export type {
+  GetPollPollsPollIdGetPathParams,
+  GetPollPollsPollIdGet200,
+  GetPollPollsPollIdGet422,
+  GetPollPollsPollIdGetQueryResponse,
+  GetPollPollsPollIdGetQuery,
+} from './GetPollPollsPollIdGet.ts'
+export type {
   GetPollsLegacyPollsGetQueryParams,
   GetPollsLegacyPollsGet200,
   GetPollsLegacyPollsGet422,
@@ -192,6 +199,7 @@ export type { ScheduleModel } from './ScheduleModel.ts'
 export type { ServerInfoGet200, ServerInfoGetQueryResponse, ServerInfoGetQuery } from './ServerInfoGet.ts'
 export type { ServerInfoModel } from './ServerInfoModel.ts'
 export type { StarBallot } from './StarBallot.ts'
+export type { TempVoterStatus } from './TempVoterStatus.ts'
 export type {
   TempVoterStatusPollsPollIdVoterStatusGetPathParams,
   TempVoterStatusPollsPollIdVoterStatusGet200,
