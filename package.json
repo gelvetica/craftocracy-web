@@ -10,6 +10,7 @@
     "generate-client": "kubb generate"
   },
   "dependencies": {
+    "@catppuccin/palette": "^1.7.1",
     "@kubb/cli": "^3.6.4",
     "@kubb/core": "^3.0.8",
     "@kubb/plugin-client": "^3.0.8",
