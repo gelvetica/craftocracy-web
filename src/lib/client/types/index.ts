@@ -53,6 +53,13 @@ export type {
   GetPollPollsPollIdGetQuery,
 } from './GetPollPollsPollIdGet.ts'
 export type {
+  GetPollResultsPollsPollIdResultsGetPathParams,
+  GetPollResultsPollsPollIdResultsGet200,
+  GetPollResultsPollsPollIdResultsGet422,
+  GetPollResultsPollsPollIdResultsGetQueryResponse,
+  GetPollResultsPollsPollIdResultsGetQuery,
+} from './GetPollResultsPollsPollIdResultsGet.ts'
+export type {
   GetPollsLegacyPollsGetQueryParams,
   GetPollsLegacyPollsGet200,
   GetPollsLegacyPollsGet422,
@@ -109,6 +116,7 @@ export type { PollChoiceResultsModel } from './PollChoiceResultsModel.ts'
 export type { PollCollection } from './PollCollection.ts'
 export type { PollModelInputBallotTypeEnum, PollModelInput } from './PollModelInput.ts'
 export type { PollReferenceModel } from './PollReferenceModel.ts'
+export type { PollResultsModel } from './PollResultsModel.ts'
 export type {
   PollVoteLegacyPollsPollIdVotePostPathParams,
   PollVoteLegacyPollsPollIdVotePost200,
@@ -118,6 +126,7 @@ export type {
   PollVoteLegacyPollsPollIdVotePostMutation,
 } from './PollVoteLegacyPollsPollIdVotePost.ts'
 export type { PollVoterModel } from './PollVoterModel.ts'
+export type { PollWithResultsModelBallotTypeEnum, PollWithResultsModel } from './PollWithResultsModel.ts'
 export type { PostBallot } from './PostBallot.ts'
 export type {
   PostElectionCandidateElectionsElectionCandidatePostPathParams,
@@ -174,6 +183,13 @@ export type {
   PostProposalProposalsPostMutationResponse,
   PostProposalProposalsPostMutation,
 } from './PostProposalProposalsPost.ts'
+export type {
+  ProcessPollResultsPollsPollIdProcessResultsGetPathParams,
+  ProcessPollResultsPollsPollIdProcessResultsGet200,
+  ProcessPollResultsPollsPollIdProcessResultsGet422,
+  ProcessPollResultsPollsPollIdProcessResultsGetQueryResponse,
+  ProcessPollResultsPollsPollIdProcessResultsGetQuery,
+} from './ProcessPollResultsPollsPollIdProcessResultsGet.ts'
 export type { ProposalCollection } from './ProposalCollection.ts'
 export type { ProposalModel } from './ProposalModel.ts'
 export type { ProposalReferenceModel } from './ProposalReferenceModel.ts'
@@ -199,6 +215,8 @@ export type { ScheduleModel } from './ScheduleModel.ts'
 export type { ServerInfoGet200, ServerInfoGetQueryResponse, ServerInfoGetQuery } from './ServerInfoGet.ts'
 export type { ServerInfoModel } from './ServerInfoModel.ts'
 export type { StarBallot } from './StarBallot.ts'
+export type { StarMatchupResults } from './StarMatchupResults.ts'
+export type { StarResults } from './StarResults.ts'
 export type { TempVoterStatus } from './TempVoterStatus.ts'
 export type {
   TempVoterStatusPollsPollIdVoterStatusGetPathParams,
@@ -216,4 +234,5 @@ export type { ValidationError } from './ValidationError.ts'
 export type { VoterStatusModel } from './VoterStatusModel.ts'
 export { modelsPollsPollModelOutputBallotTypeEnum } from './ModelsPollsPollModelOutput.ts'
 export { pollModelInputBallotTypeEnum } from './PollModelInput.ts'
+export { pollWithResultsModelBallotTypeEnum } from './PollWithResultsModel.ts'
 export { registrationModelPronounsEnum } from './RegistrationModel.ts'

@@ -11,8 +11,10 @@ export type { GetPollsLegacyPollsGetQueryKey } from './Polls (legacy)Hooks/useGe
 export type { PollVoteLegacyPollsPollIdVotePostMutationKey } from './Polls (legacy)Hooks/usePollVoteLegacyPollsPollIdVotePost.ts'
 export type { PostPollLegacyPollsPostMutationKey } from './Polls (legacy)Hooks/usePostPollLegacyPollsPost.ts'
 export type { GetPollPollsPollIdGetQueryKey } from './PollsHooks/useGetPollPollsPollIdGet.ts'
+export type { GetPollResultsPollsPollIdResultsGetQueryKey } from './PollsHooks/useGetPollResultsPollsPollIdResultsGet.ts'
 export type { PostPollPollsPostMutationKey } from './PollsHooks/usePostPollPollsPost.ts'
 export type { PostPollVotePollsPollIdVotePostMutationKey } from './PollsHooks/usePostPollVotePollsPollIdVotePost.ts'
+export type { ProcessPollResultsPollsPollIdProcessResultsGetQueryKey } from './PollsHooks/useProcessPollResultsPollsPollIdProcessResultsGet.ts'
 export type { TempVoterStatusPollsPollIdVoterStatusGetQueryKey } from './PollsHooks/useTempVoterStatusPollsPollIdVoterStatusGet.ts'
 export type { GetProposalProposalsProposalGetQueryKey } from './ProposalsHooks/useGetProposalProposalsProposalGet.ts'
 export type { GetProposalsProposalsGetQueryKey } from './ProposalsHooks/useGetProposalsProposalsGet.ts'
@@ -65,8 +67,18 @@ export {
 } from './Polls (legacy)Hooks/usePollVoteLegacyPollsPollIdVotePost.ts'
 export { postPollLegacyPollsPostMutationKey, usePostPollLegacyPollsPost } from './Polls (legacy)Hooks/usePostPollLegacyPollsPost.ts'
 export { getPollPollsPollIdGetQueryKey, getPollPollsPollIdGetQueryOptions, useGetPollPollsPollIdGet } from './PollsHooks/useGetPollPollsPollIdGet.ts'
+export {
+  getPollResultsPollsPollIdResultsGetQueryKey,
+  getPollResultsPollsPollIdResultsGetQueryOptions,
+  useGetPollResultsPollsPollIdResultsGet,
+} from './PollsHooks/useGetPollResultsPollsPollIdResultsGet.ts'
 export { postPollPollsPostMutationKey, usePostPollPollsPost } from './PollsHooks/usePostPollPollsPost.ts'
 export { postPollVotePollsPollIdVotePostMutationKey, usePostPollVotePollsPollIdVotePost } from './PollsHooks/usePostPollVotePollsPollIdVotePost.ts'
+export {
+  processPollResultsPollsPollIdProcessResultsGetQueryKey,
+  processPollResultsPollsPollIdProcessResultsGetQueryOptions,
+  useProcessPollResultsPollsPollIdProcessResultsGet,
+} from './PollsHooks/useProcessPollResultsPollsPollIdProcessResultsGet.ts'
 export {
   tempVoterStatusPollsPollIdVoterStatusGetQueryKey,
   tempVoterStatusPollsPollIdVoterStatusGetQueryOptions,
